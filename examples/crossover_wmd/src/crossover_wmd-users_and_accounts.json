@@ -1,0 +1,164 @@
+[
+    {
+        "@id": "kb:primaryuser-1e96406f-d86c-47ee-a6ac-71a57e1c8f19",
+        "@type": "uco-identity:Identity",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:simple-name-facet-abe8f440-874f-40fe-b48f-ecfdc18b8dc4",
+                "@type": "uco-identity:SimpleNameFacet",
+                "uco-identity:givenName": "Ares",
+                "uco-identity:familyName": "Lupin"
+            }
+        ]
+    },
+    {
+        "@id": "kb:primaryuser-email-3c4d0804-6ed0-4dfe-a152-3dab6b5f9111",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:primaryuser-1e96406f-d86c-47ee-a6ac-71a57e1c8f19"
+        },
+        "uco-core:target": {
+            "@id": "kb:emailaccount-99d72bac-8c21-11e9-8902-0c4de9c21b53"
+        },
+        "uco-core:kindOfRelationship": "Has_Account",
+        "uco-core:isDirectional": true
+    },
+    {
+        "@id": "kb:primaryuser-whatsapp-b295bc93-b65c-4670-a5d7-5c2206d78e92",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:primaryuser-1e96406f-d86c-47ee-a6ac-71a57e1c8f19"
+        },
+        "uco-core:target": {
+            "@id": "kb:whatsapp-90652808-7341-40d3-9285-774d865ad3f9"
+        },
+        "uco-core:kindOfRelationship": "Has_Account",
+        "uco-core:isDirectional": true
+    },
+    {
+        "@id": "kb:emailaddress-99d72bac-8c21-11e9-8902-0c4de9c21b53",
+        "@type": "uco-observable:EmailAddress",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:email-address-facet-7ce6f940-5f1d-435f-9cf5-03db933d72d8",
+                "@type": "uco-observable:EmailAddressFacet",
+                "uco-observable:addressValue": "aresthewerewolf@gmail.com"
+            }
+        ]
+    },
+    {
+        "@id": "kb:emailaccount-99d72bac-8c21-11e9-8902-0c4de9c21b53",
+        "@type": "uco-observable:EmailAccount",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:email-account-facet-e0dd5970-71d8-4261-a43a-1d216b84680f",
+                "@type": "uco-observable:EmailAccountFacet",
+                "uco-observable:emailAddress": {
+                    "@id": "kb:emailaddress-99d72bac-8c21-11e9-8902-0c4de9c21b53"
+                }
+            }
+        ]
+    },
+    {
+        "@id": "kb:phoneaccount-c1d3237a-6d7f-4e96-bbef-6eb4c0a621d1",
+        "@type": "uco-observable:PhoneAccount",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:account-facet-cd215e9d-e16c-46e4-a969-77b7e3341174",
+                "@type": "uco-observable:AccountFacet",
+                "uco-observable:accountIssuer": {
+                    "@id": "kb:organization-salt-42e95dc6-1326-4de8-93df-c399a3514ae9"
+                },
+                "uco-observable:isActive": true
+            },
+            {
+                "@id": "kb:phone-account-facet-a4492f65-3fe1-4a75-a821-676a175b25ab",
+                "@type": "uco-observable:PhoneAccountFacet",
+                "uco-observable:phoneNumber": "+31647934784",
+                "uco-core:name": ""
+            }
+        ]
+    },
+    {
+        "@id": "kb:relationship-bf423267-3afe-4f4d-aa9f-d903eae55f99",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:whatsapp-90652808-7341-40d3-9285-774d865ad3f9"
+        },
+        "uco-core:target": {
+            "@id": "kb:phoneaccount-c1d3237a-6d7f-4e96-bbef-6eb4c0a621d1"
+        },
+        "uco-core:kindOfRelationship": "Associated_Account",
+        "uco-core:isDirectional": true
+    },
+    {
+        "@id": "kb:whatsapp-90652808-7341-40d3-9285-774d865ad3f9",
+        "@type": "uco-observable:ApplicationAccount",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:account-facet-502bc393-9727-415d-b336-e466f0fa21bf",
+                "@type": "uco-observable:AccountFacet",
+                "uco-observable:accountIssuer": {
+                    "@id": "kb:organization-whatsapp-7a3fb3d1-0b30-4305-8c9e-f8f90f839bf3"
+                },
+                "uco-observable:accountIdentifier": "31647934784@s.whatsapp.net",
+                "uco-observable:isActive": true
+            },
+            {
+                "@id": "kb:application-account-facet-15811836-e4ed-48d1-ae51-1822aab89aa9",
+                "@type": "uco-observable:ApplicationAccountFacet",
+                "uco-observable:application": {
+                    "@id": "kb:application-whatsapp-e662a9de-02bb-47ad-8666-625a0a5dc2fa"
+                }
+            },
+            {
+                "@id": "kb:digital-account-facet-8794c717-cc13-44ab-8f93-77cca75fc649",
+                "@type": "uco-observable:DigitalAccountFacet",
+                "uco-observable:displayName": "Ares Lupin"
+            }
+        ]
+    },
+    {
+        "@id": "kb:organization-lebara-3ca7cf13-7d8b-4665-97b9-2c48fdb94ac5",
+        "@type": "uco-identity:Organization",
+        "uco-core:name": "Lebara"
+    },
+    {
+        "@id": "kb:organization-reddit-d5be6c8f-17ed-43fe-bc03-a5f79132f256",
+        "@type": "uco-identity:Organization",
+        "uco-core:name": "Reddit"
+    },
+    {
+        "@id": "kb:organization-salt-42e95dc6-1326-4de8-93df-c399a3514ae9",
+        "@type": "uco-identity:Organization",
+        "uco-core:name": "Salt"
+    },
+    {
+        "@id": "kb:organization-telcom-italia-d10330bf-8e9e-45cd-bf1a-ec9c964c270d",
+        "@type": "uco-identity:Organization",
+        "uco-core:name": "Telcom Italia"
+    },
+    {
+        "@id": "kb:organization-whatsapp-7a3fb3d1-0b30-4305-8c9e-f8f90f839bf3",
+        "@type": "uco-identity:Organization",
+        "uco-core:name": "WhatsApp"
+    },
+    {
+        "@id": "kb:gmail-a1ce9965-ba9c-4fa1-9bfe-58c68ecaadc5",
+        "@type": "uco-observable:Application",
+        "uco-core:hasFacet": {
+            "@id": "kb:application-facet-3ecd5cd2-d118-4b03-970f-e1196ad0a133",
+            "@type": "uco-observable:ApplicationFacet",
+            "drafting:appName": "GMail"
+        }
+    },
+    {
+        "@id": "kb:application-whatsapp-e662a9de-02bb-47ad-8666-625a0a5dc2fa",
+        "@type": "uco-observable:Application",
+        "uco-core:hasFacet": {
+            "@id": "kb:application-facet-74e8a566-4575-4ce2-84d5-4bcea81f9b70",
+            "@type": "uco-observable:ApplicationFacet",
+            "drafting:appName": "WhatsApp"
+        }
+    }
+]

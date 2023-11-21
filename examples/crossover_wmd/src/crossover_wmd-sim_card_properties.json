@@ -1,0 +1,132 @@
+[
+    {
+        "@id": "kb:simcard-b0252511-4875-4e2e-a27f-d95c35d87c1f",
+        "@type": "uco-observable:SIMCard",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:sim-card-facet-778b424f-fbda-4ca0-9097-0f545388a7e7",
+                "@type": "uco-observable:SIMCardFacet",
+                "uco-observable:ICCID": "89390100002217635543",
+                "uco-observable:carrier": {
+                    "@id": "kb:organization-telcom-italia-d10330bf-8e9e-45cd-bf1a-ec9c964c270d"
+                }
+            }
+        ]
+    },
+    {
+        "@id": "kb:mobileaccount-85704962-fcaa-40dc-b8f0-f838de819ed7",
+        "@type": "uco-observable:MobileAccount",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:account-facet-2ff9009c-69d9-4f96-8cdf-d282ecae4a24",
+                "@type": "uco-observable:AccountFacet",
+                "uco-observable:accountType": "Phone",
+                "uco-observable:isActive": false
+            },
+            {
+                "@id": "kb:mobile-account-facet-ee7a5fc7-5021-411c-8456-4d14846c95f8",
+                "@type": "uco-observable:MobileAccountFacet",
+                "uco-observable:MSISDN": "3662158453"
+            }
+        ]
+    },
+    {
+        "@id": "kb:simcard-8c41852e-babb-4a00-a23e-262b4a21ee85",
+        "@type": "uco-observable:SIMCard",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:sim-card-facet-7188a8a8-8793-4191-8ae6-744fae617294",
+                "@type": "uco-observable:SIMCardFacet",
+                "uco-observable:ICCID": "8935302143531284380",
+                "drafting:notProvided": [
+                    {
+                        "@id": "uco-observable:IMSI"
+                    },
+                    {
+                        "@id": "uco-observable:carrier"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "kb:organization-4f0b398f-2bb9-457c-b52a-67fb9e0e339a",
+        "@type": "uco-identity:Organization",
+        "uco-core:name": "Lebara"
+    },
+    {
+        "@id": "kb:simcard-1c401020-c200-4b90-9128-adb3b5e0b6fb",
+        "@type": "uco-observable:SIMCard",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:sim-card-facet-257de106-19ac-4c39-9332-90b7227f0129",
+                "@type": "uco-observable:SIMCardFacet",
+                "uco-observable:ICCID": "8931088918010550289",
+                "uco-observable:IMSI": "{mobileaccount3-uuid}",
+                "uco-observable:carrier": {
+                    "@id": "kb:organization-4f0b398f-2bb9-457c-b52a-67fb9e0e339a"
+                }
+            }
+        ]
+    },
+    {
+        "@id": "kb:mobileaccount-c27ec1f4-9adb-45e0-aedc-8cc9abe27172",
+        "@type": "uco-observable:MobileAccount",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:account-facet-a1397192-d69e-427a-ba4a-b55afc4480f5",
+                "@type": "uco-observable:AccountFacet",
+                "uco-observable:accountType": "Phone",
+                "uco-observable:isActive": true
+            },
+            {
+                "@id": "kb:mobile-account-facet-7a486740-f680-4fe2-87e9-ab99a645ab89",
+                "@type": "uco-observable:MobileAccountFacet",
+                "uco-observable:MSISDN": "31647934784",
+                "uco-observable:IMSI": "204080515881398"
+            }
+        ]
+    },
+    {
+        "@id": "kb:file-cd52c3b8-7759-40b7-ae10-dfc90a35f644",
+        "@type": "uco-observable:File",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:file-facet-b6bc7e31-cb7b-49be-bdf9-74b4d5da2997",
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:fileSystemType": "EXT3",
+                "uco-observable:extension": "db",
+                "uco-observable:fileName": "data/com.android.providers.telephony/databases/telephony.db",
+                "uco-observable:isDirectory": false
+            }
+        ]
+    },
+    {
+        "@id": "kb:sim3-telephony-relationship-fa7fd470-e58c-4d35-858a-bcc3e04e822a",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:simcard-1c401020-c200-4b90-9128-adb3b5e0b6fb"
+        },
+        "uco-core:target": {
+            "@id": "kb:file-cd52c3b8-7759-40b7-ae10-dfc90a35f644"
+        },
+        "uco-core:kindOfRelationship": "Referenced_Within",
+        "uco-core:isDirectional": true,
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:data-range-facet-cfcf2117-d3db-4fc7-90bc-947ee497dbd1",
+                "@type": "uco-observable:DataRangeFacet",
+                "uco-observable:rangeOffset": 13751,
+                "uco-observable:rangeSize": null
+            },
+            {
+                "@id": "kb:table-relation-facet-859d7e32-9422-4d73-bbf2-7364da0c2fe9",
+                "@type": [
+                    "drafting:TableRelationFacet",
+                    "uco-core:Facet"
+                ],
+                "drafting:name": "siminfo"
+            }
+        ]
+    }
+]

@@ -1,0 +1,51 @@
+[
+    {
+        "@id": "kb:filesystem-e2a02b5a-7e7e-489f-ab43-3ffadab4ac82",
+        "@type": "uco-observable:FileSystem",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:disk-partition-facet-2c7eda6d-dd5e-44d4-ba1f-fd9a879bd854",
+                "@type": "uco-observable:DiskPartitionFacet",
+                "uco-observable:diskPartitionType": "GPT",
+                "uco-observable:partitionID": "31",
+                "uco-observable:partitionOffset": 2032140288,
+                "uco-observable:partitionLength": 29236373504
+            },
+            {
+                "@id": "kb:file-system-facet-0195c87e-151f-407f-82e7-9c6b19463430",
+                "@type": "uco-observable:FileSystemFacet",
+                "uco-observable:fileSystemType": "EXT4"
+            },
+            {
+                "@id": "kb:content-data-facet-72b3d73c-f7a7-419e-957b-6f4fd4dcd8c1",
+                "@type": "uco-observable:ContentDataFacet",
+                "uco-observable:hash": [
+                    {
+                        "@id": "kb:hash-4656ab50-2658-5b66-9416-032235d2d8d5",
+                        "@type": "uco-types:Hash",
+                        "uco-types:hashMethod": {
+                            "@type": "uco-vocabulary:HashNameVocab",
+                            "@value": "MD5"
+                        },
+                        "uco-types:hashValue": {
+                            "@type": "xsd:hexBinary",
+                            "@value": "dcd09547af64f6362400adb68f87032c"
+                        }
+                    },
+                    {
+                        "@id": "kb:hash-eb771978-d3b4-5e6e-a707-99a854a1dcf2",
+                        "@type": "uco-types:Hash",
+                        "uco-types:hashMethod": {
+                            "@type": "uco-vocabulary:HashNameVocab",
+                            "@value": "SHA256"
+                        },
+                        "uco-types:hashValue": {
+                            "@type": "xsd:hexBinary",
+                            "@value": "08b1a2961b341411702c36e86adb143603abbf95"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

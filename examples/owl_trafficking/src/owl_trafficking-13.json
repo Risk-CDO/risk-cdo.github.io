@@ -1,0 +1,66 @@
+[
+    {
+        "@id": "kb:downloaded-file-3961dae3-2bca-4ccb-97fd-9919192e81db",
+        "@type": "uco-observable:File",
+        "uco-core:tag": [
+            "Picture",
+            "Owl"
+        ],
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:file-facet-0ed4b885-1229-45f8-b31c-4c48392ac5a8",
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:fileName": "download.jpg",
+                "uco-observable:filePath": "/img_LGE Nexus 5 Full Image.raw/vol_vol31/media/0/Download/download.jpg",
+                "drafting:fileLocalPath": "files/image/download.jpg",
+                "uco-observable:extension": ".jpg",
+                "uco-observable:isDirectory": false,
+                "uco-observable:allocationStatus": "allocated",
+                "uco-observable:sizeInBytes": 10704,
+                "uco-observable:observableCreatedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2017-02-03T17:19:26.00Z"
+                },
+                "uco-observable:modifiedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2017-02-03T17:19:26.00Z"
+                },
+                "uco-observable:accessedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2017-02-03T17:19:26.00Z"
+                }
+            },
+            {
+                "@id": "kb:ext-inode-facet-405861b3-82e1-49d1-90f7-26fbfc3bc19c",
+                "@type": "uco-observable:ExtInodeFacet",
+                "uco-observable:extInodeID": 1344287,
+                "uco-observable:extSGID": 1023,
+                "uco-observable:extSUID": 1023,
+                "uco-observable:extHardLinkCount": 1,
+                "uco-observable:extPermissions": 664,
+                "uco-observable:extInodeChangeTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2017-02-03T17:19:26.00Z"
+                }
+            },
+            {
+                "@id": "kb:content-data-facet-bc527b6f-af29-4d16-9557-05d79b51ac6b",
+                "@type": "uco-observable:ContentDataFacet",
+                "uco-observable:hash": [
+                    {
+                        "@id": "kb:hash-8dcf3da6-f5b1-56b2-b7ad-39a4246f0ff5",
+                        "@type": "uco-types:Hash",
+                        "uco-types:hashMethod": {
+                            "@type": "uco-vocabulary:HashNameVocab",
+                            "@value": "MD5"
+                        },
+                        "uco-types:hashValue": {
+                            "@type": "xsd:hexBinary",
+                            "@value": "70e5be834b3ba41b853f281a5c59a93b"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

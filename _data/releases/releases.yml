@@ -1,0 +1,36 @@
+- title: 0.1.0
+  date: 2017-01-13
+  desc: Initial (“prototype”) release of the CASE ontology. Included concepts copied from UCO rather than imported.
+- title: 0.2.0
+  date: 2020-08-20
+  desc: Release of the CASE ontology with an encoded relationship with UCO. Removed prototype file, imported UCO, and provided investigation namespace.
+- title: 0.2.1
+  date: TBD
+  desc: Implementation of owl:versionIRI, and adoption of UCO 0.4.1 that does the same atop UCO 0.4.0.
+- title: 0.3.0
+  date: 2021-03-19
+  desc: Adoption of UCO 0.5.0. Added inline documentation, improved ontology release engineering process, and adjusted role modeling.
+- title: 0.4.0
+  date: 2021-06-02
+  desc: Adoption of UCO 0.6.0. Revised CASE IRI structure, and added provenance support properties.
+- title: 0.5.0
+  date: 2021-10-26
+  desc: Adoption of UCO 0.7.0. Converted class structures to SHACL, and added validation tests.
+- title: 0.6.0
+  date: 2022-03-24
+  desc: Adoption of UCO 0.8.0. Alignment of exhibit number and root exhibit number definitions.
+- title: 0.7.0
+  date: 2022-06-17
+  desc: Adoption of UCO 0.9.0. Updates to workflow technology transitions and depedency upgrades.
+- title: 0.7.1
+  date: 2022-08-31
+  desc: Implementation and testing of ontology versioning.
+- title: 1.0.0
+  date: 2022-08-31
+  desc: Initial major release.
+- title: 1.1.0
+  date: 2022-11-22
+  desc: Adoption of UCO 1.1.0.  Bug fixes and test improvements.
+- title: 1.2.0
+  date: 2023-03-29
+  desc: Adoption of UCO 1.2.0.  Addition of catalog-v001.xml files in support of ontology editing tools.

@@ -1,0 +1,81 @@
+{
+    "__CASE__": "ASGARD_2019_00162",
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "@vocab": "http://example.org/ontology/local#",
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "drafting": "http://example.org/ontology/drafting/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-configuration": "https://ontology.unifiedcyberontology.org/uco/configuration/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@id": "kb:bundle-616a3d68-eb5e-4b0b-86e4-acd062c8022e",
+    "@type": "uco-core:Bundle",
+    "uco-core:description": "Initial evidence seizure in cross border investigation into disruption of public transportation service",
+    "uco-core:object": [
+        {
+            "@id": "kb:authorization-10c1cf73-54e7-4bc4-953f-f93d5408b614",
+            "@type": "case-investigation:Authorization",
+            "case-investigation:relevantAuthorization": [
+                {
+                    "@id": "kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0",
+                    "@type": "case-investigation:Authorization",
+                    "case-investigation:authorizationType": "Odin_Decree",
+                    "case-investigation:authorizationIdentifier": "Decree_2019_00013",
+                    "drafting:authorizationAuthority": {
+                        "@id": "kb:organization-e2322f63-96cb-4fd4-8ddc-351a9826598e"
+                    },
+                    "drafting:authorizationIssuedDate": {
+                        "@type": "xsd:date",
+                        "@value": "2019-03-30"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:investigation-38851327-125e-4710-a5a0-79c2b3a88295",
+            "@type": "case-investigation:Investigation",
+            "uco-core:name": "ASGARD_2018_00162",
+            "case-investigation:focus": "Denial of Service (Bifrost Bridge)",
+            "uco-core:description": "An unknown person caused public disturbance and physical damage to property in Asgard, resulting in denial of service of public transportation (Bifrost Bridge).",
+            "uco-core:object": [
+                {
+                    "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f"
+                },
+                {
+                    "@id": "kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa"
+                },
+                {
+                    "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90"
+                },
+                {
+                    "@id": "kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07"
+                },
+                {
+                    "@id": "kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53"
+                },
+                {
+                    "@id": "kb:file-mmssms-dcec8d09-a8bc-4b7c-93ab-16c7b363d48b"
+                },
+                {
+                    "@id": "kb:smsmessage-21b3e39d-772d-47b0-8501-a6945ddbdfcd"
+                },
+                {
+                    "@id": "kb:call-3e3e316c-25dd-4651-98a2-fc3422e577f7"
+                },
+                {
+                    "@id": "kb:networkconnection-9ad57807-8ddd-427a-8985-0b391c0c5179"
+                }
+            ]
+        }
+    ]
+}

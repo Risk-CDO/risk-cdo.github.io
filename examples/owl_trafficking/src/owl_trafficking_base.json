@@ -1,0 +1,42 @@
+{
+    "@context": {
+        "@vocab": "http://example.org/ontology/local#",
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "drafting": "http://example.org/ontology/drafting/",
+        "kb": "http://example.org/kb/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-configuration": "https://ontology.unifiedcyberontology.org/uco/configuration/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:bundle-5715fcf3-6bc8-4996-8f7f-fdf289f31649",
+            "@type": "uco-core:Bundle",
+            "uco-core:description": "Evidence in illegal trafficking of owls",
+            "uco-core:object": [
+                {
+                    "@id": "kb:investigation-555e5fbb-ba09-449d-af77-8a210d016fd7",
+                    "@type": "case-investigation:Investigation",
+                    "uco-core:name": "OWL_2017_0206001",
+                    "case-investigation:focus": "Illegal trafficking (owls)",
+                    "uco-core:description": "The subject mcavoy was arrested on suspicion of illegal trafficking of owls. His computer and smartphone were preserved as evidence.",
+                    "rdfs:comment": "TODO - uco-core:object to list more IRIs.",
+                    "uco-core:object": [
+                        {
+                            "@id": "kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

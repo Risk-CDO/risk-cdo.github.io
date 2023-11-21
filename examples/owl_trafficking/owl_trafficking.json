@@ -1,0 +1,1211 @@
+{
+    "@context": {
+        "@vocab": "http://example.org/ontology/local#",
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "drafting": "http://example.org/ontology/drafting/",
+        "kb": "http://example.org/kb/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-configuration": "https://ontology.unifiedcyberontology.org/uco/configuration/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:bundle-5715fcf3-6bc8-4996-8f7f-fdf289f31649",
+            "@type": "uco-core:Bundle",
+            "uco-core:description": "Evidence in illegal trafficking of owls",
+            "uco-core:object": [
+                {
+                    "@id": "kb:investigation-555e5fbb-ba09-449d-af77-8a210d016fd7",
+                    "@type": "case-investigation:Investigation",
+                    "uco-core:name": "OWL_2017_0206001",
+                    "case-investigation:focus": "Illegal trafficking (owls)",
+                    "uco-core:description": "The subject mcavoy was arrested on suspicion of illegal trafficking of owls. His computer and smartphone were preserved as evidence.",
+                    "rdfs:comment": "TODO - uco-core:object to list more IRIs.",
+                    "uco-core:object": [
+                        {
+                            "@id": "kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1",
+            "@type": "uco-tool:ConfiguredTool",
+            "uco-core:name": "Magnet ACQUIRE",
+            "uco-tool:toolType": "Extraction",
+            "uco-tool:creator": {
+                "@id": "kb:organization-magnet-1ad4338b-fa60-4823-b9af-38de3d388e36"
+            },
+            "uco-tool:version": "2.0.0.5412",
+            "uco-configuration:usesConfiguration": {
+                "@id": "kb:configuration-6cd3efd7-9550-4913-94a4-92d2579dc778",
+                "@type": "uco-configuration:Configuration",
+                "uco-configuration:configurationEntry": [
+                    {
+                        "@id": "kb:configuration-entry-2f273d07-a72a-4353-a02c-30167e6d7e5a",
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "DeviceInfoConnectionType",
+                        "uco-configuration:itemValue": "Cable No. 10"
+                    },
+                    {
+                        "@id": "kb:configuration-entry-a7a16a63-7c5b-4834-97b3-a9f45a32db47",
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "ExtractionType",
+                        "uco-configuration:itemValue": "Physical"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "kb:organization-magnet-1ad4338b-fa60-4823-b9af-38de3d388e36",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Magnet"
+        },
+        {
+            "@id": "kb:investigative-action-4d3778d9-8376-4277-9852-8e6bf926a5d1",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "extracted",
+            "uco-action:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-02-06T20:51:09.00Z"
+            },
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-02-06T22:13:08.00Z"
+            },
+            "uco-action:location": {
+                "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigator-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2"
+                },
+                {
+                    "@id": "kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record-b84dc6ca-6187-4fc3-b5f1-c15142b103a8"
+                },
+                {
+                    "@id": "kb:f3fd304e-ef6c-4cbd-94cb-425880f82748"
+                }
+            ]
+        },
+        {
+            "@id": "kb:investigator-09fb01ce-999e-4521-bd3f-f7be69a63a43",
+            "@type": "uco-identity:Person",
+            "uco-core:hasFacet": {
+                "@id": "kb:simple-name-facet-f9766ba3-3539-404b-bb05-ed422c56e677",
+                "@type": "uco-identity:SimpleNameFacet",
+                "uco-identity:familyName": "Hoel"
+            }
+        },
+        {
+            "@id": "kb:provenance-record-9bd9c456-5965-4782-8285-5fee34c8ddd2",
+            "@type": "case-investigation:ProvenanceRecord",
+            "case-investigation:exhibitNumber": "SD1",
+            "uco-core:description": "Smartphone used by subject",
+            "uco-core:object": [
+                {
+                    "@id": "kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168"
+                }
+            ]
+        },
+        {
+            "@id": "kb:provenance-record-b84dc6ca-6187-4fc3-b5f1-c15142b103a8",
+            "@type": "case-investigation:ProvenanceRecord",
+            "case-investigation:exhibitNumber": "MD1",
+            "uco-core:description": "Forensic duplicate of smartphone used by subject",
+            "uco-core:object": [
+                {
+                    "@id": "kb:f3fd304e-ef6c-4cbd-94cb-425880f82748"
+                }
+            ]
+        },
+        {
+            "@id": "kb:f3fd304e-ef6c-4cbd-94cb-425880f82748",
+            "@type": [
+                "uco-observable:File",
+                "uco-observable:Image"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-3295df4a-1c4f-4ffc-9c54-b7af1ec9f829",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-06T20:51:09.00Z"
+                    },
+                    "uco-observable:extension": "raw",
+                    "uco-observable:fileName": "LGE Nexus 5 Full Image.raw",
+                    "uco-observable:fileSystemType": "NTFS",
+                    "uco-observable:filePath": "C:\\Users\\cvance\\Desktop\\Owl Scenario - Full\\LGE Nexus 5 Full Image.raw",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 31268536320
+                },
+                {
+                    "@id": "kb:content-data-facet-c0a55cb3-6caf-4226-bc99-b2a6b4bfb802",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-7ca0e7ac-6898-54cd-a97c-1f971dd0b36e",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "MD5"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "B334843A07A9E16494EEBDF3079E6BC6"
+                            }
+                        },
+                        {
+                            "@id": "kb:hash-b5132ecb-a53c-5471-a08d-09426ea2991c",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA1"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "5506912AAC41534DC5AF12B51059D5880737AB5E"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168",
+            "@type": "uco-observable:MobileDevice",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:device-facet-27755568-25ae-4db6-850c-ba97da0fd507",
+                    "@type": "uco-observable:DeviceFacet",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-lge-e7ae1d96-e054-44b5-9943-8da6515e8332"
+                    },
+                    "uco-observable:model": "Nexus 5",
+                    "uco-observable:serialNumber": "08ebf545d00af782",
+                    "drafting:brand": "Google",
+                    "drafting:name": "hammerhead",
+                    "drafting:encryptionEnabled": false
+                },
+                {
+                    "@id": "kb:android-device-facet-2b3356eb-0ce4-4671-a80b-7d5cead82a8c",
+                    "@type": "uco-observable:AndroidDeviceFacet",
+                    "uco-observable:androidID": {
+                        "@type": "xsd:hexBinary",
+                        "@value": "64cce130286b31b3"
+                    },
+                    "uco-observable:androidFingerprint": "lge\u2026"
+                },
+                {
+                    "@id": "kb:boot-loader-facet-9ae7f2de-8f58-4bd6-b050-c30704ff7782",
+                    "@type": [
+                        "drafting:BootLoaderFacet",
+                        "uco-core:Facet"
+                    ],
+                    "drafting:label": "HHZ20h",
+                    "drafting:buildIdentifier": "M4B30Z",
+                    "drafting:buildDate": "2016-11-03T20:03:42.00Z"
+                },
+                {
+                    "@id": "kb:mobile-device-facet-b03b6c7e-85f8-4a07-8069-e40e2f1a06fe",
+                    "@type": "uco-observable:MobileDeviceFacet",
+                    "uco-observable:bluetoothDeviceName": "Nexus5",
+                    "drafting:deviceActivationTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-01T14:31:30.00Z"
+                    },
+                    "drafting:locationsServicesEnabled": true,
+                    "uco-observable:keypadUnlockCode": "NULL",
+                    "uco-observable:IMEI": "352584062438806",
+                    "uco-observable:clockSetting": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-06T20:51:09.35Z"
+                    },
+                    "uco-observable:storageCapacityInBytes": 31268536320
+                },
+                {
+                    "@id": "kb:operating-system-facet-478dc553-2d39-45ff-8974-d3d1b8df7c75",
+                    "@type": "uco-observable:OperatingSystemFacet",
+                    "uco-core:name": "Android",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-lge-e7ae1d96-e054-44b5-9943-8da6515e8332"
+                    },
+                    "uco-observable:advertisingID": "48500120-c9c5-402e-a6bc-04e2f92ae259",
+                    "uco-observable:version": "6.0.1"
+                },
+                {
+                    "@id": "kb:wifi-address-facet-57724dcb-18f7-4913-a659-64ca79336107",
+                    "@type": "uco-observable:WifiAddressFacet",
+                    "uco-observable:addressValue": "34:4d:f7:54:20:bb"
+                },
+                {
+                    "@id": "kb:bluetooth-address-facet-d8e6290e-6abc-4efd-af81-8ea6ce8951a1",
+                    "@type": "uco-observable:BluetoothAddressFacet",
+                    "uco-observable:addressValue": "88:c9:d0:03:04:49"
+                }
+            ]
+        },
+        {
+            "@id": "kb:relationship-6d7a7a20-ca70-4f7f-994d-c2db39e08545",
+            "@type": "uco-core:Relationship",
+            "uco-core:source": {
+                "@id": "kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168"
+            },
+            "uco-core:target": {
+                "@id": "kb:mobileaccount-4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
+            },
+            "uco-core:kindOfRelationship": "Has_Account",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:simcard1-relationship-a1dbff0e-974b-4295-b035-e1bc3271945d",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:simcard-24d20c80-f035-40ae-88dd-fc66f70180f6"
+            },
+            "uco-core:target": {
+                "@id": "kb:lge-device-eee670c6-01d4-4e42-bb6b-ebeca149b168"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "rdfs:comment": "TODO - The startTime for this relationship was previously recorded with a time stamp that, by later analyst's guess, was meant to be a stand-in for an unknown time in 2017: '2017-00-00T12:34:56Z'.  Such partial information requires another representation.  See e.g. time:Instant.",
+            "rdfs:seeAlso": {
+                "@id": "https://www.w3.org/TR/owl-time/#time:Instant"
+            },
+            "uco-core:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-02-06T20:00:00.00Z"
+            },
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:simcard-24d20c80-f035-40ae-88dd-fc66f70180f6",
+            "@type": "uco-observable:SIMCard",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:sim-card-facet-15765152-c1d9-40f2-91d9-c10885fdf077",
+                    "@type": "uco-observable:SIMCardFacet",
+                    "uco-observable:ICCID": "89014104279201697299",
+                    "uco-observable:IMSI": "310410920169729",
+                    "uco-observable:carrier": {
+                        "@id": "kb:organization-att-d60ffcec-4d89-48a1-b264-9cd4bc700a70"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:mobileaccount-4b3cdcbd-6a31-462f-be9b-1ca2944c8876",
+            "@type": "uco-observable:MobileAccount",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:account-facet-ccba5bf1-e927-40a9-bce5-d6dc8a3d8758",
+                    "@type": "uco-observable:AccountFacet",
+                    "uco-observable:accountType": "phone",
+                    "uco-observable:isActive": true
+                },
+                {
+                    "@id": "kb:mobile-account-facet-cfaf632e-ea3a-4808-871a-151181040393",
+                    "@type": "uco-observable:MobileAccountFacet",
+                    "uco-observable:MSISDN": "+13046388446",
+                    "uco-observable:IMSI": "310410920169729"
+                }
+            ]
+        },
+        {
+            "@id": "kb:sim-telephony-relationship-f7dfe5f0-e95a-4d0a-9d0e-8ed416e69587",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:simcard-24d20c80-f035-40ae-88dd-fc66f70180f6"
+            },
+            "uco-core:target": {
+                "@id": "kb:telephony-cd52c3b8-7759-40b7-ae10-dfc90a35f644"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:data-range-facet-f4a40b62-4904-4b09-aa14-9f132b4780bc",
+                    "@type": "uco-observable:DataRangeFacet",
+                    "uco-observable:rangeOffset": 13751,
+                    "drafting:notProvided": {
+                        "@id": "uco-observable:rangeSize"
+                    }
+                },
+                {
+                    "@id": "kb:table-relation-facet-f5124067-62a3-4805-93c6-09fe591c63b1",
+                    "@type": [
+                        "drafting:TableRelationFacet",
+                        "uco-core:Facet"
+                    ],
+                    "drafting:tableName": "siminfo"
+                }
+            ]
+        },
+        {
+            "@id": "kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f",
+            "@type": "uco-identity:Person",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:simple-name-facet-deeb96a3-4ff4-421b-af13-b0c6088e05c8",
+                    "@type": "uco-identity:SimpleNameFacet",
+                    "uco-identity:givenName": "Sarah",
+                    "uco-identity:familyName": "McAvoy"
+                }
+            ]
+        },
+        {
+            "@id": "kb:primaryuser-faceboook-cb34b068-324b-4162-a9e5-6c96879b061c",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f"
+            },
+            "uco-core:target": {
+                "@id": "kb:email-account-99d72bac-8c21-11e9-8902-0c4de9c21b53"
+            },
+            "uco-core:kindOfRelationship": "Has_Account",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:primaryuser-email-cb34b068-324b-4162-a9e5-6c96879b061c",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:primaryuser-d28a3fad-10a1-459c-9a1a-6aa07a04e76f"
+            },
+            "uco-core:target": {
+                "@id": "kb:facebook-90652808-7341-40d3-9285-774d865ad3f9"
+            },
+            "uco-core:kindOfRelationship": "Has_Account",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:email-address-d6fbe80f-9098-4650-b7a8-0b0e225cec2b",
+            "@type": "uco-observable:EmailAddress",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:email-address-facet-0d246f05-1cf0-49f0-a7b9-47aa62185113",
+                    "@type": "uco-observable:EmailAddressFacet",
+                    "uco-observable:addressValue": "mcavoys87@gmail.com"
+                }
+            ]
+        },
+        {
+            "@id": "kb:email-account-99d72bac-8c21-11e9-8902-0c4de9c21b53",
+            "@type": "uco-observable:EmailAccount",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:email-account-facet-94be1c5b-247e-45a0-84e3-ef1c270ccf81",
+                    "@type": "uco-observable:EmailAccountFacet",
+                    "uco-observable:emailAddress": {
+                        "@id": "kb:email-address-d6fbe80f-9098-4650-b7a8-0b0e225cec2b"
+                    }
+                },
+                {
+                    "@id": "kb:account-authentication-facet-75964c74-1054-4f3c-bf9d-1e3f3edcff30",
+                    "@type": "uco-observable:AccountAuthenticationFacet",
+                    "uco-observable:password": "louisville!21"
+                }
+            ]
+        },
+        {
+            "@id": "kb:c1d3237a-6d7f-4e96-bbef-6eb4c0a621d1",
+            "@type": "uco-observable:PhoneAccount",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:account-facet-c90795be-47ec-49cc-9f1d-e74a427262e9",
+                    "@type": "uco-observable:AccountFacet",
+                    "uco-observable:accountIssuer": {
+                        "@id": "kb:organization-att-d60ffcec-4d89-48a1-b264-9cd4bc700a70"
+                    },
+                    "uco-observable:isActive": true
+                },
+                {
+                    "@id": "kb:phone-account-facet-c34e1761-ed44-40fa-aac0-33305c743958",
+                    "@type": "uco-observable:PhoneAccountFacet",
+                    "uco-observable:phoneNumber": "+19014449108"
+                }
+            ]
+        },
+        {
+            "@id": "kb:associated-account-phonenumber-0307a497-f1fb-4af4-9877-90c56ee76fba",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:facebook-90652808-7341-40d3-9285-774d865ad3f9"
+            },
+            "uco-core:target": {
+                "@id": "kb:c1d3237a-6d7f-4e96-bbef-6eb4c0a621d1"
+            },
+            "uco-core:kindOfRelationship": "Associated_Account",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:facebook-90652808-7341-40d3-9285-774d865ad3f9",
+            "@type": "uco-observable:DigitalAccount",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:account-facet-fb1a2b29-018f-4c2d-ac02-797112901c8c",
+                    "@type": "uco-observable:AccountFacet",
+                    "uco-observable:accountIssuer": {
+                        "@id": "kb:organization-facebook-fcb0d2ee-e681-4314-98c3-47fb2541aae9"
+                    },
+                    "uco-observable:accountIdentifier": "100015073810863",
+                    "uco-observable:isActive": true
+                },
+                {
+                    "@id": "kb:application-account-facet-074bd62f-b071-44d9-a934-d11d21b45970",
+                    "@type": "uco-observable:ApplicationAccountFacet",
+                    "uco-observable:application": {
+                        "@id": "kb:application-facebook-25e8018f-49be-4898-bb1d-731e387e9eb7"
+                    }
+                },
+                {
+                    "@id": "kb:digital-account-facet-90a397d9-d615-4d57-af0d-9013a45ff862",
+                    "@type": "uco-observable:DigitalAccountFacet",
+                    "uco-observable:displayName": "????"
+                }
+            ]
+        },
+        {
+            "@id": "kb:organization-facebook-fcb0d2ee-e681-4314-98c3-47fb2541aae9",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Facebook"
+        },
+        {
+            "@id": "kb:application-facebook-25e8018f-49be-4898-bb1d-731e387e9eb7",
+            "@type": "uco-observable:Application",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:application-facet-134b1129-c58e-4fbb-9383-923688bf8a16",
+                    "@type": "uco-observable:ApplicationFacet",
+                    "drafting:appName": "Facebook"
+                }
+            ]
+        },
+        {
+            "@id": "kb:accounts-9999c405-9326-4f28-9b8d-44a3bb9e9999",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:email-address-d6fbe80f-9098-4650-b7a8-0b0e225cec2b"
+            },
+            "uco-core:target": {
+                "@id": "kb:accountsxml-16805dff-05f9-4cba-9266-d5fa712f3d8f"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:data-range-facet-399f540f-064c-4f57-b547-30f7648f1bdb",
+                    "@type": "uco-observable:DataRangeFacet",
+                    "uco-observable:rangeOffset": 352,
+                    "uco-observable:rangeSize": 20
+                }
+            ]
+        },
+        {
+            "@id": "kb:accountsxml-16805dff-05f9-4cba-9266-d5fa712f3d8f",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-7595eb3c-fd0f-4ef5-acd6-019ea87613c2",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:fileName": "accounts.xml",
+                    "uco-observable:filePath": "/img_LGE Nexus 5 Full Image.raw/vol_vol31/data/com.google.android.gms/shared_prefs/accounts.xml",
+                    "uco-observable:extension": ".xml",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:allocationStatus": "allocated",
+                    "uco-observable:sizeInBytes": 891,
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-01T03:12:19.00Z"
+                    },
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-01T03:12:19.00Z"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:accounts-99999999-9326-4f28-9b8d-44a3b9999999",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:email-address-d6fbe80f-9098-4650-b7a8-0b0e225cec2b"
+            },
+            "uco-core:target": {
+                "@id": "kb:accountsdb-99995dff-05f9-4cba-9266-d5fa712f9999"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:data-range-facet-9569acd6-94a2-4934-a886-db3f3591c6b9",
+                    "@type": "uco-observable:DataRangeFacet",
+                    "uco-observable:rangeOffset": 16272,
+                    "uco-observable:rangeSize": 20
+                }
+            ]
+        },
+        {
+            "@id": "kb:accountsdb-99995dff-05f9-4cba-9266-d5fa712f9999",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-443e35ef-0357-40d4-874b-475eddee735c",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:fileName": "accounts.db",
+                    "uco-observable:filePath": "/img_LGE Nexus 5 Full Image.raw/vol_vol31/system/users/0/accounts.db",
+                    "uco-observable:extension": ".db",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:allocationStatus": "allocated",
+                    "uco-observable:sizeInBytes": 159744,
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-06T21:03:08.00Z"
+                    },
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-06T21:03:08.00Z"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:skype-99992808-7341-40d3-9285-774d865a9999",
+            "@type": "uco-observable:DigitalAccount",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:account-facet-75bfb201-2b4a-4dea-aa1d-459267ace0f3",
+                    "@type": "uco-observable:AccountFacet",
+                    "uco-observable:accountIssuer": {
+                        "@id": "kb:organization-skypeapp-cc44c2ae-bdd3-4df8-9ca3-1f58d682d62b"
+                    },
+                    "uco-observable:accountIdentifier": "mcavoys87",
+                    "uco-observable:isActive": true
+                }
+            ]
+        },
+        {
+            "@id": "kb:textapp-9b38d51f-f5b9-4740-9968-6f1a1e1ec7bf",
+            "@type": "uco-observable:DigitalAccount",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:account-facet-6dcb6fea-adb3-49b8-b929-1ef18e82c3f1",
+                    "@type": "uco-observable:AccountFacet",
+                    "uco-observable:accountIssuer": {
+                        "@id": "kb:organization-textapp-a2ba855b-1218-44f5-9f73-a2530defbc73"
+                    },
+                    "uco-observable:accountIdentifier": "mcavoy287",
+                    "uco-observable:isActive": true
+                },
+                {
+                    "@id": "kb:digital-account-facet-1b9bbc72-e079-49bb-a0dd-eed722015d56",
+                    "@type": "uco-observable:DigitalAccountFacet",
+                    "uco-observable:displayName": "NULL",
+                    "uco-observable:accountLogin": "mcavoy287",
+                    "uco-observable:firstLoginTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-01-30T19:00:31Z"
+                    }
+                },
+                {
+                    "@id": "kb:account-authentication-facet-953fadd8-3a81-48f5-bf30-6d2f5b76b264",
+                    "@type": "uco-observable:AccountAuthenticationFacet",
+                    "uco-observable:password": "huntington*32"
+                }
+            ]
+        },
+        {
+            "@id": "kb:LoginData-c316c405-9326-4f28-9b8d-44a3bb9e7283",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:textapp-9b38d51f-f5b9-4740-9968-6f1a1e1ec7bf"
+            },
+            "uco-core:target": {
+                "@id": "kb:textapplogcat-1a717ea6-8990-4709-92f0-d748cacb817e"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:data-range-facet-139e35d8-3a76-4320-86d1-05d136c8d128",
+                    "@type": "uco-observable:DataRangeFacet",
+                    "uco-observable:rangeOffset": 2704,
+                    "uco-observable:rangeSize": 9
+                }
+            ]
+        },
+        {
+            "@id": "kb:userdata-partition-d94cd1b5-5cf7-4642-8927-5ebea573d68e",
+            "@type": "uco-observable:DiskPartition"
+        },
+        {
+            "@id": "kb:partition-87d669fc-8ab9-47c6-a66d-af09d73361d5",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:userdata-partition-d94cd1b5-5cf7-4642-8927-5ebea573d68e"
+            },
+            "uco-core:target": {
+                "@id": "kb:f3fd304e-ef6c-4cbd-94cb-425880f82748"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:data-range-facet-4e75e42d-d972-4b16-904e-91e1d6310a1d",
+                    "@type": "uco-observable:DataRangeFacet",
+                    "uco-observable:rangeOffset": 2032140288,
+                    "uco-observable:rangeSize": 29236373504
+                }
+            ]
+        },
+        {
+            "@id": "kb:filesystem-e2a02b5a-7e7e-489f-ab43-3ffadab4ac82",
+            "@type": "uco-observable:FileSystem",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:disk-partition-facet-2c7eda6d-dd5e-44d4-ba1f-fd9a879bd854",
+                    "@type": "uco-observable:DiskPartitionFacet",
+                    "uco-observable:diskPartitionType": "GPT",
+                    "uco-observable:partitionID": "31",
+                    "uco-observable:partitionOffset": 2032140288,
+                    "uco-observable:partitionLength": 29236373504
+                },
+                {
+                    "@id": "kb:file-system-facet-0195c87e-151f-407f-82e7-9c6b19463430",
+                    "@type": "uco-observable:FileSystemFacet",
+                    "uco-observable:fileSystemType": "EXT4"
+                },
+                {
+                    "@id": "kb:content-data-facet-72b3d73c-f7a7-419e-957b-6f4fd4dcd8c1",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-4656ab50-2658-5b66-9416-032235d2d8d5",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "MD5"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "dcd09547af64f6362400adb68f87032c"
+                            }
+                        },
+                        {
+                            "@id": "kb:hash-eb771978-d3b4-5e6e-a707-99a854a1dcf2",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "08b1a2961b341411702c36e86adb143603abbf95"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:filesystem-relationship-f64f857e-6c87-417f-9166-5aaaed8a6fd2",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:downloaded-file-3961dae3-2bca-4ccb-97fd-9919192e81db"
+            },
+            "uco-core:target": {
+                "@id": "kb:filesystem-e2a02b5a-7e7e-489f-ab43-3ffadab4ac82"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:path-relation-facet-0c7b2d7c-7aaa-406f-b0f7-4fd80c34f0d6",
+                    "@type": "uco-observable:PathRelationFacet",
+                    "uco-observable:path": "/img_LGE Nexus 5 Full Image.raw/vol_vol31/media/0/Download/download.jpg"
+                }
+            ]
+        },
+        {
+            "@id": "kb:downloaded-file-3961dae3-2bca-4ccb-97fd-9919192e81db",
+            "@type": "uco-observable:File",
+            "uco-core:tag": [
+                "Picture",
+                "Owl"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-0ed4b885-1229-45f8-b31c-4c48392ac5a8",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:fileName": "download.jpg",
+                    "uco-observable:filePath": "/img_LGE Nexus 5 Full Image.raw/vol_vol31/media/0/Download/download.jpg",
+                    "drafting:fileLocalPath": "files/image/download.jpg",
+                    "uco-observable:extension": ".jpg",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:allocationStatus": "allocated",
+                    "uco-observable:sizeInBytes": 10704,
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-03T17:19:26.00Z"
+                    },
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-03T17:19:26.00Z"
+                    },
+                    "uco-observable:accessedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-03T17:19:26.00Z"
+                    }
+                },
+                {
+                    "@id": "kb:ext-inode-facet-405861b3-82e1-49d1-90f7-26fbfc3bc19c",
+                    "@type": "uco-observable:ExtInodeFacet",
+                    "uco-observable:extInodeID": 1344287,
+                    "uco-observable:extSGID": 1023,
+                    "uco-observable:extSUID": 1023,
+                    "uco-observable:extHardLinkCount": 1,
+                    "uco-observable:extPermissions": 664,
+                    "uco-observable:extInodeChangeTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-03T17:19:26.00Z"
+                    }
+                },
+                {
+                    "@id": "kb:content-data-facet-bc527b6f-af29-4d16-9557-05d79b51ac6b",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-8dcf3da6-f5b1-56b2-b7ad-39a4246f0ff5",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "MD5"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "70e5be834b3ba41b853f281a5c59a93b"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:downloaded-directory-9999dae3-2bca-4ccb-97fd-9919192e9999",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-2761e29c-e282-4147-a6d5-1a6fde1d75ec",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:fileName": "IMG_20170203_121618.jpg",
+                    "uco-observable:filePath": "/img_LGE Nexus 5 Full Image.raw/vol_vol31/media/0/DCIM/Camera/IMG_20170203_121618.jpg",
+                    "drafting:fileLocalPath": "files/image/IMG_20170203_121618.jpg",
+                    "uco-observable:extension": ".jpg",
+                    "uco-observable:isDirectory": true,
+                    "uco-observable:allocationStatus": "unallocated",
+                    "uco-observable:sizeInBytes": 4096,
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-03T17:22:30.00Z"
+                    },
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-03T17:22:30.00Z"
+                    },
+                    "uco-observable:accessedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-03T17:22:30.00Z"
+                    }
+                },
+                {
+                    "@id": "kb:ext-inode-facet-7fff44a4-d05d-4149-b6a4-6b66ebfa6a17",
+                    "@type": "uco-observable:ExtInodeFacet",
+                    "uco-observable:extInodeID": 1351746,
+                    "uco-observable:extSGID": 1023,
+                    "uco-observable:extSUID": 1023,
+                    "uco-observable:extHardLinkCount": 1,
+                    "uco-observable:extPermissions": 755,
+                    "uco-observable:extInodeChangeTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-03T17:22:30.00Z"
+                    }
+                },
+                {
+                    "@id": "kb:recovered-object-facet-7892602f-d286-4a16-bd12-2cba8feae993",
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "overwritten"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:message-9999898c-0178-4534-8107-caea0a0f9999",
+            "@type": "uco-observable:Application"
+        },
+        {
+            "@id": "kb:sms-message-2c032220-8c21-11e9-9c99-0c4de9c21b53",
+            "@type": "uco-observable:SMSMessage",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:message-facet-9b01629a-6c67-4dce-8d6e-ff0b7b38ccf4",
+                    "@type": "uco-observable:MessageFacet",
+                    "uco-observable:application": {
+                        "@id": "kb:message-9999898c-0178-4534-8107-caea0a0f9999"
+                    },
+                    "uco-observable:sentTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-01T00:41:15.00Z"
+                    },
+                    "uco-observable:messageText": "Sarah, the delivery is today 7 tonight the confirmation will come later through pidgin",
+                    "drafting:allocationStatus": "unallocated",
+                    "uco-observable:from": {
+                        "@id": "kb:9999237a-6d7f-4e96-bbef-6eb4c0a69999"
+                    },
+                    "uco-observable:to": [
+                        {
+                            "@id": "kb:c1d3237a-6d7f-4e96-bbef-6eb4c0a621d1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:9999237a-6d7f-4e96-bbef-6eb4c0a69999",
+            "@type": "uco-observable:PhoneAccount",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:account-facet-8770c7a5-d027-4ca2-b6ed-953380cc17e4",
+                    "@type": "uco-observable:AccountFacet",
+                    "uco-observable:accountIssuer": {
+                        "@id": "kb:organization-att-d60ffcec-4d89-48a1-b264-9cd4bc700a70"
+                    },
+                    "uco-observable:isActive": true
+                },
+                {
+                    "@id": "kb:phone-account-facet-0bc2e99c-6734-4072-bc3f-6c2330678d74",
+                    "@type": "uco-observable:PhoneAccountFacet",
+                    "uco-observable:phoneNumber": "+13045184333"
+                }
+            ]
+        },
+        {
+            "@id": "kb:mmssmsdb-journalfile-c05ebe49-b8a9-4f61-b872-88f6f304a3c6",
+            "@type": "uco-observable:File"
+        },
+        {
+            "@id": "kb:message-database-relationship-e83e0484-c8fb-4c66-8c7e-0b17052bb826",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:sms-message-2c032220-8c21-11e9-9c99-0c4de9c21b53"
+            },
+            "uco-core:target": {
+                "@id": "kb:mmssmsdb-journalfile-c05ebe49-b8a9-4f61-b872-88f6f304a3c6"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:data-range-facet-15096817-ed26-4b4d-9697-c4291e1d055a",
+                    "@type": "uco-observable:DataRangeFacet",
+                    "uco-observable:rangeOffset": 2560,
+                    "uco-observable:rangeSize": 96
+                },
+                {
+                    "@id": "kb:table-relation-facet-cd4940c2-f1ad-4b12-b57c-f07150958f94",
+                    "@type": [
+                        "drafting:TableRelationFacet",
+                        "uco-core:Facet"
+                    ],
+                    "drafting:tableName": "sms"
+                }
+            ]
+        },
+        {
+            "@id": "kb:skypeapp-a6b73e78-00da-11eb-a396-acde48001122",
+            "@type": "uco-observable:Application"
+        },
+        {
+            "@id": "kb:externalaccount-8976b508-80e5-4442-af1c-637d3b09240e",
+            "@type": "uco-observable:DigitalAccount"
+        },
+        {
+            "@id": "kb:skypemsg-eafca388-f926-4d48-864d-1bfdd3a2ba7f",
+            "@type": "uco-observable:Message",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:message-facet-d6e7f706-ad87-4a96-82cb-fe54dade5f09",
+                    "@type": "uco-observable:MessageFacet",
+                    "uco-observable:messageText": "Hey Matt thanks for the hook up",
+                    "uco-observable:application": {
+                        "@id": "kb:skypeapp-a6b73e78-00da-11eb-a396-acde48001122"
+                    },
+                    "uco-observable:sentTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-01-30T19:15:25.00Z"
+                    },
+                    "uco-observable:from": {
+                        "@id": "kb:skype-99992808-7341-40d3-9285-774d865a9999"
+                    },
+                    "uco-observable:to": [
+                        {
+                            "@id": "kb:externalaccount-8976b508-80e5-4442-af1c-637d3b09240e"
+                        }
+                    ],
+                    "drafting:allocationStatus": "allocated",
+                    "uco-observable:messageType": "incoming"
+                }
+            ]
+        },
+        {
+            "@id": "kb:url-history-39ff4987-8ae5-47e3-8369-dbd0d5f79398",
+            "@type": "uco-observable:URLHistory",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:url-history-facet-a455b867-957e-4fce-a0ad-1af9c6fa4edb",
+                    "@type": "uco-observable:URLHistoryFacet",
+                    "uco-observable:browserInformation": {
+                        "@id": "kb:software-5d96df90-d9e1-423c-b8db-c2327812ab38"
+                    },
+                    "uco-observable:urlHistoryEntry": [
+                        {
+                            "@id": "kb:url-history-entry-193a7fc6-5f15-4b3c-8763-f1dc3c9bfd14",
+                            "@type": "uco-observable:URLHistoryEntry",
+                            "uco-observable:firstVisit": {
+                                "@type": "xsd:dateTime",
+                                "@value": "2017-01-25T02:20:22.00Z"
+                            },
+                            "uco-observable:lastVisit": {
+                                "@type": "xsd:dateTime",
+                                "@value": "2017-01-25T02:20:22.00Z"
+                            },
+                            "uco-observable:expirationTime": null,
+                            "rdfs:comment": "TODO: Was uco-observable:browserUserProfile meant to be an object property?",
+                            "drafting:browserUserProfileAccount": {
+                                "@id": "kb:profile-account-857c7f17-2f6b-4618-aeca-50d79fa69b97"
+                            },
+                            "uco-observable:url": {
+                                "@id": "kb:url-b7906534-0483-4cf4-979c-5351916602ed"
+                            },
+                            "uco-observable:referrerUrl": null,
+                            "uco-observable:pageTitle": "Where can you find baby owls for sale? Are owls legal to keep as pets? - Quora",
+                            "uco-observable:visitCount": 2,
+                            "uco-observable:manuallyEnteredCount": {
+                                "@type": "xsd:nonNegativeInteger",
+                                "@value": "0"
+                            },
+                            "uco-observable:keywordSearchTerm": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:url-b7906534-0483-4cf4-979c-5351916602ed",
+            "@type": "uco-observable:URL",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:url-facet-f2618636-aec3-459e-bda7-eeedfbeac3c0",
+                    "@type": "uco-observable:URLFacet",
+                    "uco-observable:fullValue": "https://www.quora.com/Where-can-you-find-baby-owls-for-sale-Are-owls-legal-to-keep-as-pets"
+                }
+            ]
+        },
+        {
+            "@id": "kb:bfe049a6-fa3f-4bf6-9c37-9b09cc6afe6b",
+            "@type": "uco-observable:File",
+            "uco-core:tag": [
+                "Database"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-3664fa42-2c49-4315-862d-528a99204092",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:fileName": "History",
+                    "uco-observable:filePath": "/img_LGE Nexus 5 Full Image.raw/vol_vol31/data/com.android.chrome/app_chrome/Default/History",
+                    "drafting:fileLocalPath": "files/Database/History",
+                    "uco-observable:extension": null,
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 176128,
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-01-25T01:10:45.00Z"
+                    },
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-03T17:22:29.00Z"
+                    },
+                    "uco-observable:accessedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-01-25T01:10:45.00Z"
+                    }
+                },
+                {
+                    "@id": "kb:ext-inode-facet-010753fc-e14d-41f2-9d82-2d1caeb45f43",
+                    "@type": "uco-observable:ExtInodeFacet",
+                    "uco-observable:extInodeID": 1483050,
+                    "uco-observable:extSGID": 10034,
+                    "uco-observable:extSUID": 10034,
+                    "uco-observable:extInodeChangeTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-02-03T17:22:29.00Z"
+                    }
+                },
+                {
+                    "@id": "kb:content-data-facet-66ebc116-ab04-4371-98d3-37636b8db756",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-0fa1dc4c-8fa2-5d5e-a903-fc5d70d151c4",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "MD5"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "42ecb5615ad2778968c295c0a1b0837b"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:2af6fcf3-91d3-4457-9333-abab67f8fb91",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:url-history-39ff4987-8ae5-47e3-8369-dbd0d5f79398"
+            },
+            "uco-core:target": {
+                "@id": "kb:bfe049a6-fa3f-4bf6-9c37-9b09cc6afe6b"
+            },
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:data-range-facet-e5ceec7a-b273-4460-9edf-f778a5744740",
+                    "@type": "uco-observable:DataRangeFacet",
+                    "uco-observable:rangeOffset": 100832,
+                    "uco-observable:rangeSize": 176
+                },
+                {
+                    "@id": "kb:table-relation-facet-17fb8bb8-91d4-4f16-af9e-17efbae05464",
+                    "@type": [
+                        "drafting:TableRelationFacet",
+                        "uco-core:Facet"
+                    ],
+                    "drafting:tableName": "urls"
+                }
+            ]
+        },
+        {
+            "@id": "kb:latlong-8667ec82-8c21-11e9-934e-0c4de9c21b53",
+            "@type": "uco-location:Location",
+            "uco-core:hasFacet": {
+                "@id": "kb:lat-long-coordinates-facet-c72523a2-52a7-49f0-9709-b8bacb1dc90a",
+                "@type": "uco-location:LatLongCoordinatesFacet",
+                "uco-location:latitude": {
+                    "@type": "xsd:decimal",
+                    "@value": "38.423756"
+                },
+                "uco-location:longitude": {
+                    "@type": "xsd:decimal",
+                    "@value": "-82.43619"
+                },
+                "uco-location:altitude": null
+            }
+        },
+        {
+            "@id": "kb:camera-xml-e2066a67-4eee-4893-b7b9-ef6c72149044",
+            "@type": "uco-observable:File"
+        },
+        {
+            "@id": "kb:cameralocation-relationship-c6f64e98-68c5-4d2e-9ae8-a7e110f2ac83",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:latlong-8667ec82-8c21-11e9-934e-0c4de9c21b53"
+            },
+            "uco-core:target": {
+                "@id": "kb:camera-xml-e2066a67-4eee-4893-b7b9-ef6c72149044"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:magnet-acquire2005412-83715215-c5fc-4231-99ff-29a3c51cb5f1",
+            "@type": "uco-tool:Tool",
+            "rdfs:comment": "TODO: The tool:Tool type is redundant after the release of 1.0.0."
+        },
+        {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037",
+            "@type": "uco-observable:Device"
+        },
+        {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8",
+            "@type": "uco-location:Location"
+        },
+        {
+            "@id": "kb:organization-att-d60ffcec-4d89-48a1-b264-9cd4bc700a70",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "AT&T"
+        },
+        {
+            "@id": "kb:organization-lge-e7ae1d96-e054-44b5-9943-8da6515e8332",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "LGE"
+        },
+        {
+            "@id": "kb:organization-skypeapp-cc44c2ae-bdd3-4df8-9ca3-1f58d682d62b",
+            "@type": "uco-identity:Organization"
+        },
+        {
+            "@id": "kb:organization-textapp-a2ba855b-1218-44f5-9f73-a2530defbc73",
+            "@type": "uco-identity:Organization"
+        },
+        {
+            "@id": "kb:software-5d96df90-d9e1-423c-b8db-c2327812ab38",
+            "@type": "uco-observable:Application"
+        },
+        {
+            "@id": "kb:textapplogcat-1a717ea6-8990-4709-92f0-d748cacb817e",
+            "@type": "uco-observable:ObservableObject"
+        },
+        {
+            "@id": "kb:telephony-cd52c3b8-7759-40b7-ae10-dfc90a35f644",
+            "@type": "uco-observable:ObservableObject"
+        }
+    ]
+}

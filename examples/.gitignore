@@ -1,0 +1,4 @@
+*.diff
+generated-*
+query-*.html
+query-*.md

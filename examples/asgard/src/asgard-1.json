@@ -1,0 +1,134 @@
+[
+    {
+        "@id": "kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:name": "preserved",
+        "uco-action:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2019-03-30T22:36:24.35Z"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0"
+        },
+        "uco-action:location": {
+            "@id": "kb:asgard-bifrost-e4bf5ac0-a8b1-490f-930b-38593e87d5b8"
+        },
+        "uco-action:performer": {
+            "@id": "kb:investigator-899bb310-f5cd-4ab5-9e96-1234a37ed1da"
+        },
+        "uco-action:object": [],
+        "uco-action:result": [
+            {
+                "@id": "kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa"
+            },
+            {
+                "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f"
+            }
+        ]
+    },
+    {
+        "@id": "kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:description": "Suspect device found near Bifrost Bridge after disruption",
+        "case-investigation:exhibitNumber": "AsgardPD-20190330-001A",
+        "uco-core:object": [
+            {
+                "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f"
+            }
+        ]
+    },
+    {
+        "@id": "kb:organization-92feec0e-e2d0-4a98-bf47-dd0809265611",
+        "@type": "uco-identity:Organization",
+        "uco-core:name": "Apple"
+    },
+    {
+        "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f",
+        "@type": "uco-observable:Device",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:device-facet-10a08c82-0e17-4aa7-88c1-d6b64b06472c",
+                "@type": "uco-observable:DeviceFacet",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-92feec0e-e2d0-4a98-bf47-dd0809265611"
+                },
+                "uco-observable:deviceType": "iPhone",
+                "uco-observable:model": "MG552",
+                "uco-observable:serialNumber": "F18Q4LGRG5MD"
+            },
+            {
+                "@id": "kb:mobile-device-facet-20e46067-250b-4a09-a829-5a15cbcfd6c9",
+                "@type": "uco-observable:MobileDeviceFacet",
+                "uco-observable:keypadUnlockCode": "123789",
+                "uco-observable:IMEI": "359305065690067",
+                "uco-observable:clockSetting": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2019-03-30T22:36:24.35Z"
+                },
+                "drafting:localeLanguage": "no_AS",
+                "uco-observable:phoneActivationTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-05-09T07:36:24.35Z"
+                },
+                "uco-observable:storageCapacityInBytes": 17179869184
+            },
+            {
+                "@id": "kb:iPhone-device-facet-2263ff04-4025-42ba-a30c-58eb98f84fe2",
+                "@type": [
+                    "drafting:iPhoneDeviceFacet",
+                    "uco-core:Facet"
+                ],
+                "drafting:uniqueID": "B3858A69A29375E6C706226B3633A3A11EB2A774",
+                "drafting:ownerName": "Loki iPhone"
+            },
+            {
+                "@id": "kb:operating-system-facet-262f1b31-e23d-4324-84cb-5d55528caf63",
+                "@type": "uco-observable:OperatingSystemFacet",
+                "uco-core:name": "iOS",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                },
+                "uco-observable:version": "10.3"
+            },
+            {
+                "@id": "kb:wifi-address-facet-27d5903b-0037-4a98-acad-4f5003461899",
+                "@type": "uco-observable:WifiAddressFacet",
+                "uco-observable:addressValue": "d0:33:11:13:e7:a1"
+            },
+            {
+                "@id": "kb:bluetooth-address-facet-287af7ea-756d-4094-8ed9-fcad5e70bee4",
+                "@type": "uco-observable:BluetoothAddressFacet",
+                "uco-observable:addressValue": "d0:33:11:13:e7:a2"
+            }
+        ]
+    },
+    {
+        "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90",
+        "@type": "uco-observable:MobileAccount",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:account-facet-31df5a8a-fb9f-4fa6-85f9-cea13f4b9f03",
+                "@type": "uco-observable:AccountFacet",
+                "uco-observable:accountType": "Phone",
+                "uco-observable:isActive": true
+            },
+            {
+                "@id": "kb:mobile-account-facet-50320fc0-d112-4720-9f20-93843d84f3b3",
+                "@type": "uco-observable:MobileAccountFacet",
+                "uco-observable:MSISDN": "1239275339"
+            }
+        ]
+    },
+    {
+        "@id": "kb:relationship-68d4edd7-3aca-449b-8f6d-261f8c70ca08",
+        "@type": "uco-core:Relationship",
+        "uco-core:source": {
+            "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f"
+        },
+        "uco-core:target": {
+            "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90"
+        },
+        "uco-core:kindOfRelationship": "Has_Account",
+        "uco-core:isDirectional": true
+    }
+]

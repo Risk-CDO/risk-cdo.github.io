@@ -1,0 +1,25 @@
+PREFIX case-investigation: <https://ontology.caseontology.org/case/investigation/>
+PREFIX drafting: <http://example.org/ontology/drafting/>
+PREFIX uco-action: <https://ontology.unifiedcyberontology.org/uco/action/>
+PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+PREFIX uco-location: <https://ontology.unifiedcyberontology.org/uco/location/>
+
+SELECT DISTINCT ?nLocation ?lRoomId ?lDescription
+WHERE
+{
+  ?nAction
+    a case-investigation:InvestigativeAction ;
+    uco-action:location ?nLocation ;
+    .
+
+  ?nLocation
+    a uco-location:Location ;
+    uco-core:description ?lDescription ;
+    uco-core:hasFacet [
+      a uco-location:SimpleAddressFacet ;
+      drafting:roomId ?lRoomId ;
+    ]
+    .
+
+}
+ORDER BY ?nLocation

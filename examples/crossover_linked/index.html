@@ -1,0 +1,68 @@
+---
+<!-- layout: releases -->
+title: Crossover CASE - Linked
+jumbo_desc:
+---
+
+<h2>Crossover CASE - Linked</h2>
+
+<p>The link between the two seemingly separate investigations is obtained by querying for email addresses.</p>
+
+<p>The index of scenario portions is <a href="../crossover/">here</a>.</p>
+
+{% highlight sparql %}
+SELECT ?nInvestigationName ?lAddress
+WHERE {
+
+  ?nInvestigation
+    a case-investigation:Investigation ;
+    uco-core:name ?nInvestigationName ;
+    .
+
+  ?nEmailAddress
+    a uco-observable:EmailAddress ;
+    uco-core:hasFacet ?nEmailAddressFacet ;
+    .
+
+  ?nEmailAddressFacet
+    uco-observable:addressValue ?lAddress ;
+    .
+}
+{% endhighlight %}
+
+The results of this query list the Investigation and associated email address, which reveal a link.
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-condensed">
+            <thead>
+              <tr>
+                <th>?nInvestigationName</th>
+                <th>?lAddress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CROSSOVER_2018_11191001</td>
+                <td>aresthewerewolf@gmail.com <aresthewerewolf></td>
+              </tr>
+              <tr>
+                <td>CROSSOVER_2018_11191001</td>
+                <td>badquinn3@gmail.com</td>
+              </tr>
+              <tr>
+                <td>CROSSOVER_2018_12111001</td>
+                <td>aresthewerewolf@gmail.com <aresthewerewolf></td>
+              </tr>
+              <tr>
+                <td> CROSSOVER_2018_12111001 </td>
+                <td>badquinn3@gmail.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+<h3>Disclaimers</h3>
+
+<p>Participation by contributors in the creation of the documentation of mentioned software is not intended to imply a recommendation or endorsement by the United States Government nor any of the contributors' employers, nor is it intended to imply that any specific software is necessarily the best available for the purpose.</p>
+
+<p>Events, locations, tools, and people represented in this and other CASE narratives are presented, and at many times created, for illustration purposes only and do not necessarily represent real events, locations, tools, or people.</p>

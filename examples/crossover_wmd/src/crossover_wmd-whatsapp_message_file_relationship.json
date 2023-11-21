@@ -1,0 +1,30 @@
+[
+    {
+        "@id": "kb:relationship-c316c405-9326-4f28-9b8d-44a3bb9e7283",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:message-ed5d35d6-6e7c-4099-80f4-1fadfc0ee08c"
+        },
+        "uco-core:target": {
+            "@id": "kb:msgstoredb-16805dff-05f9-4cba-9266-d5fa712f3d8f"
+        },
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:isDirectional": true,
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:data-range-facet-0a23fdf3-484c-436a-8aae-f4e8d8dba7bc",
+                "@type": "uco-observable:DataRangeFacet",
+                "uco-observable:rangeOffset": 293822,
+                "uco-observable:rangeSize": 477952
+            },
+            {
+                "@id": "kb:table-relation-facet-8cc3fa01-985f-4c0c-8614-3fa4afce58cd",
+                "@type": [
+                    "drafting:TableRelationFacet",
+                    "uco-core:Facet"
+                ],
+                "drafting:path": "messages"
+            }
+        ]
+    }
+]

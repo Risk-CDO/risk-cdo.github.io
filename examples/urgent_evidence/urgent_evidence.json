@@ -1,0 +1,1597 @@
+{
+    "@context": {
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "drafting": "http://example.org/ontology/drafting/",
+        "kb": "http://example.org/kb/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:action-uuid-1",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:description": "Exhibit submitted for Kiosk examination",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T14:00+00:00"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-1"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-1"
+            },
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record-uuid-1"
+                },
+                {
+                    "@id": "kb:subject-device-uuid-1"
+                }
+            ]
+        },
+        {
+            "@id": "kb:action-uuid-2",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "transferred",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T14:05+00:00"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-1"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:provenance-record-uuid-1"
+                },
+                {
+                    "@id": "kb:subject-device-uuid-1"
+                }
+            ],
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-2"
+            },
+            "uco-action:result": [
+                {
+                    "@id": "kb:file-uuid-1"
+                },
+                {
+                    "@id": "kb:provenance-record-uuid-2"
+                }
+            ],
+            "uco-core:description": "Exhibit seal checks (passed) & Exhibit receipted in lab"
+        },
+        {
+            "@id": "kb:action-uuid-3",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "assigned",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T14:05:30+00:00"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-1"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-2"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:provenance-record-uuid-1"
+                },
+                {
+                    "@id": "kb:subject-device-uuid-1"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record-uuid-3"
+                }
+            ],
+            "uco-core:description": "Exhibit assigned to Kiosk technician"
+        },
+        {
+            "@id": "kb:action-uuid-4",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "photographed",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T14:15+00:00"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:camera-uuid-1"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-3"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:provenance-record-uuid-3"
+                },
+                {
+                    "@id": "kb:subject-device-uuid-1"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record-uuid-4"
+                },
+                {
+                    "@id": "kb:subject-device-photograph-uuid-1"
+                },
+                {
+                    "@id": "kb:subject-device-photograph-uuid-2"
+                },
+                {
+                    "@id": "kb:subject-device-photograph-uuid-3"
+                }
+            ],
+            "uco-core:description": "Sealed Exhibit Photographed"
+        },
+        {
+            "@id": "kb:action-uuid-5",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T14:20+00:00"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-3"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "uco-core:description": "Exhibit Unsealed"
+        },
+        {
+            "@id": "kb:action-uuid-6",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "photographed",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T14:21+00:00"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:camera-uuid-1"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-3"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:provenance-record-uuid-3"
+                },
+                {
+                    "@id": "kb:subject-device-uuid-1"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record-uuid-5"
+                },
+                {
+                    "@id": "kb:subject-device-photograph-uuid-4"
+                },
+                {
+                    "@id": "kb:subject-device-photograph-uuid-5"
+                },
+                {
+                    "@id": "kb:subject-device-photograph-uuid-6"
+                }
+            ],
+            "uco-core:description": "Unsealed Exhibit Photographed"
+        },
+        {
+            "@id": "kb:action-uuid-7",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "processed",
+            "uco-action:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T14:25+00:00"
+            },
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T14:55+00:00"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-3"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:kiosk-uuid-1"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:provenance-record-uuid-3"
+                },
+                {
+                    "@id": "kb:subject-device-uuid-1"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record-uuid-6"
+                },
+                {
+                    "@id": "kb:extracted-file-uuid-1"
+                },
+                {
+                    "@id": "kb:extracted-file-uuid-2"
+                },
+                {
+                    "@id": "kb:extracted-file-uuid-3"
+                },
+                {
+                    "@id": "kb:file-uuid-2"
+                }
+            ],
+            "uco-core:description": "Exhibit Connected to Kiosk & process started; exhibit disconnected at conclusion"
+        },
+        {
+            "@id": "kb:action-uuid-8",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T15:00+00:00"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-3"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "uco-core:description": "Exhibit Resealed"
+        },
+        {
+            "@id": "kb:action-uuid-9",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "selected",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T15:03+00:00"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:kiosk-uuid-1"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-3"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:provenance-record-uuid-6"
+                },
+                {
+                    "@id": "kb:extracted-file-uuid-1"
+                },
+                {
+                    "@id": "kb:extracted-file-uuid-2"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record-uuid-6e"
+                }
+            ],
+            "uco-core:description": "Picture selected, via kiosk review screen, from those extracted from exhibit"
+        },
+        {
+            "@id": "kb:action-uuid-10",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "burned",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T15:05+00:00"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-3"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:extracted-file-uuid-1"
+                },
+                {
+                    "@id": "kb:provenance-record-uuid-6"
+                },
+                {
+                    "@id": "kb:provenance-record-uuid-6e"
+                },
+                {
+                    "@id": "kb:file2-uuid-1"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record-uuid-7"
+                },
+                {
+                    "@id": "kb:dvd-uuid-1"
+                }
+            ],
+            "uco-core:description": "Report DVD Generated as associated exhibit"
+        },
+        {
+            "@id": "kb:dvd-uuid-1",
+            "@type": "uco-observable:Device",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:device-facet-8879fd9c-951e-46c3-99d2-b6dbf62c77b2",
+                    "@type": "uco-observable:DeviceFacet",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-e84a49ff-f34c-46fe-ab88-6f0f79023925"
+                    },
+                    "uco-observable:deviceType": "DVD",
+                    "uco-observable:model": "XYZ",
+                    "uco-observable:serialNumber": "756867KF234"
+                }
+            ]
+        },
+        {
+            "@id": "kb:relationship-uuid-1",
+            "@type": "uco-core:Relationship",
+            "uco-core:source": {
+                "@id": "kb:file-uuid-2"
+            },
+            "uco-core:target": {
+                "@id": "kb:dvd-uuid-1"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:path-relation-facet-da0ef358-bb92-488a-b0c1-0229efdefbf4",
+                    "@type": "uco-observable:PathRelationFacet",
+                    "uco-observable:path": "/investigation468/results/EXH-20190101-7-KioskReport.pdf"
+                }
+            ]
+        },
+        {
+            "@id": "kb:action-uuid-11",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T15:10+00:00"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-3"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "uco-core:description": "DVD Report sealed"
+        },
+        {
+            "@id": "kb:action-uuid-12",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T15:15+00:00"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-3"
+            },
+            "uco-action:performer": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:provenance-record-uuid-7"
+                },
+                {
+                    "@id": "kb:dvd-uuid-1"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record-73f59a8a-1c22-41fe-af50-13e8b6a65de9"
+                },
+                {
+                    "@id": "kb:file-uuid-3"
+                }
+            ],
+            "uco-core:description": "Witness statement completed"
+        },
+        {
+            "@id": "kb:file-uuid-1",
+            "@type": "uco-observable:File",
+            "uco-core:description": "Intake Form",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-7330ce77-6438-4bbb-86d5-510ea0f21ecd",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:fileName": "/investigation468/documentation/EXH-20190101-7-IntakeForm.pdf",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 165646
+                },
+                {
+                    "@id": "kb:content-data-facet-358d046c-920d-455d-88b3-5c490aa2ca88",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-1c86f419-621d-5576-b333-319c098cc725",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "09CC5D284371DB21727F1171A30C6652F062E6DE1282D952D0E9DF36EAE7C594"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:file-uuid-2",
+            "@type": "uco-observable:File",
+            "uco-core:description": "Kiosk report",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-03fc4016-6426-43f1-b6fb-b372a55ea689",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:fileName": "/investigation468/results/EXH-20190101-7-KioskReport.pdf",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 5787906
+                },
+                {
+                    "@id": "kb:content-data-facet-264ff4a9-7d84-4f7e-b34f-05375eaeb3f3",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-e642f5b3-7bb8-5b57-8582-e6dd9701f715",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "D54A0EAA6C2B49C962A4B172418734311458D976A5866495F3A6A0CD952924D4"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:file-uuid-3",
+            "@type": "uco-observable:File",
+            "uco-core:description": "Witness statement",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-9a9f5c70-cc3e-4423-804b-ca87dca99eda",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:fileName": "/investigation468/documentation/EXH-20190101-7-WitnessStatement.pdf",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 135625
+                },
+                {
+                    "@id": "kb:content-data-facet-2801ab8a-44e7-4397-89b4-6cafc55da9a7",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-775d1e74-b058-59a0-a50c-e680e041f48d",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "25961D1D0923BCD919B9560B81EDFF47B478D025E7AE2549F7ED0AC5C2AB6023"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:action-uuid-13",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "transferred",
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2019-01-01T15:20+00:00"
+            },
+            "uco-action:location": {
+                "@id": "kb:location-uuid-4"
+            },
+            "uco-action:performer": [
+                {
+                    "@id": "kb:officer-uuid-3"
+                }
+            ],
+            "uco-action:object": [
+                {
+                    "@id": "kb:provenance-record-uuid-3"
+                },
+                {
+                    "@id": "kb:subject-device-uuid-1"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record-uuid-8"
+                }
+            ],
+            "uco-core:description": "Sealed Exhibit handed the OIC & Transfer documentation signed"
+        },
+        {
+            "@id": "kb:camera-uuid-1",
+            "@type": [
+                "uco-observable:Device",
+                "uco-tool:AnalyticTool"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:device-facet-dc5d0f34-5b9b-4f1d-b21b-14454c7b8648",
+                    "@type": "uco-observable:DeviceFacet",
+                    "uco-observable:deviceType": "camera",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-f5a0877c-2a58-4280-8f24-c0df39e8badc"
+                    },
+                    "uco-observable:model": "PowerShot SX540"
+                }
+            ],
+            "uco-tool:creator": {
+                "@id": "kb:organization-f5a0877c-2a58-4280-8f24-c0df39e8badc"
+            }
+        },
+        {
+            "@id": "kb:kiosk-uuid-1",
+            "@type": "uco-tool:AnalyticTool",
+            "uco-tool:creator": {
+                "@id": "kb:organization-a177a5d6-118c-419f-bca3-03af8000d121"
+            }
+        },
+        {
+            "@id": "kb:location-uuid-1",
+            "@type": "uco-location:Location",
+            "uco-core:description": "(Room 1-001) Police station intake lab",
+            "uco-core:hasFacet": {
+                "@id": "kb:simple-address-facet-0d79372c-2639-4ee6-a76e-a5205dcc7b0d",
+                "@type": "uco-location:SimpleAddressFacet",
+                "drafting:roomId": "1-001",
+                "uco-location:country": "United Kingdom",
+                "uco-location:locality": "London"
+            }
+        },
+        {
+            "@id": "kb:location-uuid-2",
+            "@type": "uco-location:Location",
+            "uco-core:description": "(Room B-001) Police station evidence vault",
+            "uco-core:hasFacet": {
+                "@id": "kb:simple-address-facet-06d3090f-bda0-4a2c-9ffd-a135edb76c19",
+                "@type": "uco-location:SimpleAddressFacet",
+                "drafting:roomId": "B-001",
+                "uco-location:country": "United Kingdom",
+                "uco-location:locality": "London"
+            }
+        },
+        {
+            "@id": "kb:location-uuid-3",
+            "@type": "uco-location:Location",
+            "uco-core:description": "(Room 2-013) Police station evidence processing lab",
+            "uco-core:hasFacet": {
+                "@id": "kb:simple-address-facet-070b776f-f2b1-4f78-a8a9-2f19fb0e45b6",
+                "@type": "uco-location:SimpleAddressFacet",
+                "drafting:roomId": "2-013",
+                "uco-location:country": "United Kingdom",
+                "uco-location:locality": "London"
+            }
+        },
+        {
+            "@id": "kb:location-uuid-4",
+            "@type": "uco-location:Location",
+            "uco-core:description": "(Room 3-022) Desk of Officer Hudson",
+            "uco-core:hasFacet": {
+                "@id": "kb:simple-address-facet-29823947-41f2-4c4e-b8f0-c1664697f9ea",
+                "@type": "uco-location:SimpleAddressFacet",
+                "drafting:roomId": "3-022",
+                "uco-location:country": "United Kingdom",
+                "uco-location:locality": "London"
+            }
+        },
+        {
+            "@id": "kb:officer-uuid-1",
+            "@type": "uco-identity:Person",
+            "uco-core:hasFacet": {
+                "@id": "kb:simple-name-facet-b43bfc55-7ea1-4159-bd96-763c2c015515",
+                "@type": "uco-identity:SimpleNameFacet",
+                "uco-identity:familyName": "Hudson"
+            }
+        },
+        {
+            "@id": "kb:officer-uuid-2",
+            "@type": "uco-identity:Person",
+            "uco-core:hasFacet": {
+                "@id": "kb:simple-name-facet-d1eb0c4f-0ed2-4981-ada9-12a3be820ce3",
+                "@type": "uco-identity:SimpleNameFacet",
+                "uco-identity:familyName": "Smith"
+            }
+        },
+        {
+            "@id": "kb:officer-uuid-3",
+            "@type": "uco-identity:Person",
+            "uco-core:hasFacet": {
+                "@id": "kb:simple-name-facet-841d264a-1bfe-4f7e-b8aa-733554d383e4",
+                "@type": "uco-identity:SimpleNameFacet",
+                "uco-identity:familyName": "Walker"
+            }
+        },
+        {
+            "@id": "kb:organization-e84a49ff-f34c-46fe-ab88-6f0f79023925",
+            "@type": "uco-identity:Organization",
+            "uco-core:description": "Generic"
+        },
+        {
+            "@id": "kb:organization-a177a5d6-118c-419f-bca3-03af8000d121",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "ACME"
+        },
+        {
+            "@id": "kb:organization-f5a0877c-2a58-4280-8f24-c0df39e8badc",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Canon"
+        },
+        {
+            "@id": "kb:provenance-record-uuid-1",
+            "@type": "case-investigation:ProvenanceRecord",
+            "drafting:exhibitTransferrer": {
+                "@id": "kb:officer-uuid-1"
+            },
+            "drafting:exhibitRecipient": {
+                "@id": "kb:officer-uuid-2"
+            },
+            "case-investigation:exhibitNumber": "EXH-20190101-7",
+            "case-investigation:rootExhibitNumber": "EXH-20190101-7",
+            "uco-core:object": {
+                "@id": "kb:subject-device-uuid-1"
+            }
+        },
+        {
+            "@id": "kb:provenance-record-uuid-2",
+            "@type": "case-investigation:ProvenanceRecord",
+            "case-investigation:exhibitNumber": "EXH-20190101-7-IntakeForm",
+            "case-investigation:rootExhibitNumber": "EXH-20190101-7",
+            "uco-core:object": {
+                "@id": "kb:file-uuid-1"
+            }
+        },
+        {
+            "@id": "kb:provenance-record-uuid-3",
+            "@type": "case-investigation:ProvenanceRecord",
+            "drafting:exhibitTransferrer": {
+                "@id": "kb:officer-uuid-2"
+            },
+            "drafting:exhibitRecipient": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "case-investigation:rootExhibitNumber": "EXH-20190101-7",
+            "uco-core:object": {
+                "@id": "kb:subject-device-uuid-1"
+            }
+        },
+        {
+            "@id": "kb:provenance-record-uuid-4",
+            "@type": "case-investigation:ProvenanceRecord",
+            "case-investigation:exhibitNumber": "EXH-20190101-7-SealedPhotos",
+            "case-investigation:rootExhibitNumber": "EXH-20190101-7",
+            "uco-core:object": [
+                {
+                    "@id": "kb:subject-device-photograph-uuid-1"
+                },
+                {
+                    "@id": "kb:subject-device-photograph-uuid-2"
+                },
+                {
+                    "@id": "kb:subject-device-photograph-uuid-3"
+                }
+            ]
+        },
+        {
+            "@id": "kb:provenance-record-uuid-5",
+            "@type": "case-investigation:ProvenanceRecord",
+            "case-investigation:exhibitNumber": "EXH-20190101-7-UnsealedPhotos",
+            "case-investigation:rootExhibitNumber": "EXH-20190101-7",
+            "uco-core:object": [
+                {
+                    "@id": "kb:subject-device-photograph-uuid-4"
+                },
+                {
+                    "@id": "kb:subject-device-photograph-uuid-5"
+                },
+                {
+                    "@id": "kb:subject-device-photograph-uuid-6"
+                }
+            ]
+        },
+        {
+            "@id": "kb:provenance-record-uuid-6",
+            "@type": "case-investigation:ProvenanceRecord",
+            "case-investigation:exhibitNumber": "EXH-20190101-7-KioskReport",
+            "case-investigation:rootExhibitNumber": "EXH-20190101-7",
+            "uco-core:object": [
+                {
+                    "@id": "kb:extracted-file-uuid-1"
+                },
+                {
+                    "@id": "kb:extracted-file-uuid-2"
+                },
+                {
+                    "@id": "kb:extracted-file-uuid-3"
+                },
+                {
+                    "@id": "kb:file-uuid-2"
+                }
+            ]
+        },
+        {
+            "@id": "kb:provenance-record-uuid-6e",
+            "@type": "case-investigation:ProvenanceRecord",
+            "case-investigation:exhibitNumber": "EXH-20190101-7-B",
+            "case-investigation:rootExhibitNumber": "EXH-20190101-7",
+            "uco-core:object": [
+                {
+                    "@id": "kb:extracted-file-uuid-1"
+                }
+            ]
+        },
+        {
+            "@id": "kb:provenance-record-uuid-7",
+            "@type": "case-investigation:ProvenanceRecord",
+            "case-investigation:exhibitNumber": "EXH-20190101-7-KioskReportDVD",
+            "case-investigation:rootExhibitNumber": "EXH-20190101-7",
+            "uco-core:object": {
+                "@id": "kb:dvd-uuid-1"
+            }
+        },
+        {
+            "@id": "kb:provenance-record-73f59a8a-1c22-41fe-af50-13e8b6a65de9",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:object": {
+                "@id": "kb:file-uuid-3"
+            }
+        },
+        {
+            "@id": "kb:provenance-record-uuid-8",
+            "@type": "case-investigation:ProvenanceRecord",
+            "drafting:exhibitTransferrer": {
+                "@id": "kb:officer-uuid-3"
+            },
+            "drafting:exhibitRecipient": {
+                "@id": "kb:officer-uuid-1"
+            },
+            "case-investigation:exhibitNumber": "EXH-20190101-7",
+            "case-investigation:rootExhibitNumber": "EXH-20190101-7",
+            "uco-core:object": {
+                "@id": "kb:subject-device-uuid-1"
+            }
+        },
+        {
+            "@id": "kb:subject-device-photograph-uuid-1",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:content-data-facet-2a463871-ebc0-47f4-b79e-9a4cc14c5116",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:mimeType": "image/jpeg",
+                    "uco-observable:sizeInBytes": 4929041,
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-dc27e089-5491-5954-9a7e-5e672096e65b",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "6ba5b138057cca4e737a86083cf28426093f218efbef64967863a6c83138fe89"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "kb:exif-facet-fed032db-c60c-452f-99b2-f8ff92636153",
+                    "@type": "uco-observable:EXIFFacet",
+                    "uco-observable:exifData": {
+                        "@id": "kb:controlled-dictionary-92e3e3d5-a291-4bc2-80ba-783b13fe0057",
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@id": "kb:controlled-dictionary-entry-84333d44-b169-4a51-88b2-2f72a7d8b242",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "DateTimeDigitized",
+                                "uco-types:value": "2019-01-01 14:14:07"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-7c8a9a79-e968-49d9-bcb8-8a079515abc0",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Height",
+                                "uco-types:value": "4000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-f6a9962d-80bd-4f5d-aa62-a3ebb97bbb02",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Width",
+                                "uco-types:value": "6000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-4d7fc8df-2300-488b-9eec-d2a5af077901",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Make",
+                                "uco-types:value": "Canon"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-9dfedd0e-4988-4074-ac4b-5a5b4e387b37",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Model",
+                                "uco-types:value": "PowerShot SX540"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-71386b46-7e31-41c5-9e67-c8632ec95118",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Orientation",
+                                "uco-types:value": "Horizontal (normal)"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "kb:file-facet-0d217aa8-19f0-46ba-bbfc-f9da8acb4d57",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG_4829.jpg",
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2019-01-01T14:14:07+00:00"
+                    },
+                    "uco-observable:sizeInBytes": 4929041
+                },
+                {
+                    "@id": "kb:raster-picture-facet-15df6f44-5ac8-4f20-a641-8764bacca2e6",
+                    "@type": "uco-observable:RasterPictureFacet",
+                    "uco-observable:pictureType": "jpg",
+                    "uco-observable:pictureHeight": 6000,
+                    "uco-observable:pictureWidth": 4000
+                }
+            ]
+        },
+        {
+            "@id": "kb:subject-device-photograph-uuid-2",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:content-data-facet-a855b91f-fa57-4360-9bc3-9c172dc42ec1",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:mimeType": "image/jpeg",
+                    "uco-observable:sizeInBytes": 4491816,
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-a107dc51-8473-55b3-aeb0-b1d612b06774",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "cadc54f42a9d01ecb5ecdc3a9a4824c73301d6ce9857eaa73fc28317ccd5d40f"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "kb:exif-facet-6e28ec0a-28aa-4a8c-b3fd-e51fd58bc696",
+                    "@type": "uco-observable:EXIFFacet",
+                    "uco-observable:exifData": {
+                        "@id": "kb:controlled-dictionary-88f0e102-2cb4-4108-a76c-bcac6642fbb3",
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@id": "kb:controlled-dictionary-entry-ae4829a6-5666-4596-9a26-49cd9350f3a2",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "DateTimeDigitized",
+                                "uco-types:value": "2019-01-01 14:14:30"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-8fbada55-fee7-44e3-b6ce-29c06ee17b9d",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Height",
+                                "uco-types:value": "4000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-bd3d410e-4628-4fc7-a347-42bf66be4c33",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Width",
+                                "uco-types:value": "6000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-2568ba72-e5f2-4ca8-bcf5-678c1f2a0795",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Make",
+                                "uco-types:value": "Canon"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-fc61543a-48f1-4c71-b68f-67ec7e6af8e8",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Model",
+                                "uco-types:value": "PowerShot SX540"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-21ce7a07-2df4-4b91-8790-15d4026a58de",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Orientation",
+                                "uco-types:value": "Horizontal (normal)"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "kb:file-facet-885898a6-6cc5-4f10-afcd-658ce8e808b2",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG_4830.jpg",
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2019-01-01T14:14:30+00:00"
+                    },
+                    "uco-observable:sizeInBytes": 4491816
+                },
+                {
+                    "@id": "kb:raster-picture-facet-9390354b-1b3e-4f65-b399-a42c497585c9",
+                    "@type": "uco-observable:RasterPictureFacet",
+                    "uco-observable:pictureType": "jpg",
+                    "uco-observable:pictureHeight": 6000,
+                    "uco-observable:pictureWidth": 4000
+                }
+            ]
+        },
+        {
+            "@id": "kb:subject-device-photograph-uuid-3",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:content-data-facet-477c4c0b-4d54-4d06-a4df-c38cada9da98",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:mimeType": "image/jpeg",
+                    "uco-observable:sizeInBytes": 3236101,
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-c9afb845-3b2d-5af8-bf11-35d285209b9c",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "ee3657ad73c09098312e71a31ca7ac468c1fb1b998b5d6647ad471dcc89c4141"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "kb:exif-facet-df699f83-cd11-4d41-bac6-df750604e38b",
+                    "@type": "uco-observable:EXIFFacet",
+                    "uco-observable:exifData": {
+                        "@id": "kb:controlled-dictionary-f5cc0713-92cb-4d79-9c17-7165f2a4d6a0",
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@id": "kb:controlled-dictionary-entry-e28e974b-fd8f-40ca-942e-e72b298b1906",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "DateTimeDigitized",
+                                "uco-types:value": "2019-01-01 14:15:00"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-7e16cf38-d997-490c-95cb-a4b148175c01",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Height",
+                                "uco-types:value": "4000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-b7e3561c-6017-4f3e-8f28-96933384bfaf",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Width",
+                                "uco-types:value": "6000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-7bb8bf58-6b79-4918-b223-adb633d7c323",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Make",
+                                "uco-types:value": "Canon"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-d8b1c9c0-4f89-428d-8a19-794909f289fd",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Model",
+                                "uco-types:value": "PowerShot SX540"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-803d188f-d250-4ae5-91b6-d2422767cd6a",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Orientation",
+                                "uco-types:value": "Horizontal (normal)"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "kb:file-facet-091fcb18-03c7-4387-ab42-86be39c0431f",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG_4831.jpg",
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2019-01-01T14:15:00+00:00"
+                    },
+                    "uco-observable:sizeInBytes": 3236101
+                },
+                {
+                    "@id": "kb:raster-picture-facet-a110216e-5003-4664-9c02-624c608278f5",
+                    "@type": "uco-observable:RasterPictureFacet",
+                    "uco-observable:pictureType": "jpg",
+                    "uco-observable:pictureHeight": 6000,
+                    "uco-observable:pictureWidth": 4000
+                }
+            ]
+        },
+        {
+            "@id": "kb:subject-device-photograph-uuid-4",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:content-data-facet-d2898de9-9d59-470e-b6b0-9c89eaa76f2b",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:mimeType": "image/jpeg",
+                    "uco-observable:sizeInBytes": 3777924,
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-3934df3d-1589-5897-928f-0d8fe22f116b",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "132bfadcc46addedcafcd84653f1a56007eba2f27bfcb15824536cda65a49c9a"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "kb:exif-facet-4a36e6d5-9a91-45ee-a7fc-0d9c7c845081",
+                    "@type": "uco-observable:EXIFFacet",
+                    "uco-observable:exifData": {
+                        "@id": "kb:controlled-dictionary-c1104959-6401-4fd1-80aa-01ff98bad685",
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@id": "kb:controlled-dictionary-entry-61358a64-fdce-44dd-8f02-b118ac445f47",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "DateTimeDigitized",
+                                "uco-types:value": "2019-01-01 14:20:07"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-85da1b1d-c0d5-43a4-bb41-571dbd9868ca",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Height",
+                                "uco-types:value": "4000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-3b25097e-8f2c-46f5-b00a-ea5691008e9d",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Width",
+                                "uco-types:value": "6000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-4cee88fb-f996-450e-b98b-75e9ee2e7d63",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Make",
+                                "uco-types:value": "Canon"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-3c523f30-66df-4f64-862f-ed097222e39c",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Model",
+                                "uco-types:value": "PowerShot SX540"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-ac4213a9-f9ce-4bdf-b7fa-94d30b361e54",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Orientation",
+                                "uco-types:value": "Horizontal (normal)"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "kb:file-facet-d7f549b5-d0ff-4e49-a66f-5bffc40a84d0",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG_4832.jpg",
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2019-01-01T14:20:07+00:00"
+                    },
+                    "uco-observable:sizeInBytes": 3777924
+                },
+                {
+                    "@id": "kb:raster-picture-facet-5df582f0-cdf7-46df-979c-80daaaf0ac8b",
+                    "@type": "uco-observable:RasterPictureFacet",
+                    "uco-observable:pictureType": "jpg",
+                    "uco-observable:pictureHeight": 6000,
+                    "uco-observable:pictureWidth": 4000
+                }
+            ]
+        },
+        {
+            "@id": "kb:subject-device-photograph-uuid-5",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:content-data-facet-03e1bc0c-84ec-401a-ab08-8be1056b6c21",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:mimeType": "image/jpeg",
+                    "uco-observable:sizeInBytes": 5010291,
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-a6c7a86b-7f24-5b4d-87ae-b265bdaf129a",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "1929ec6c6186f43860da7c77c0c65d1b8543a5543572261a1b71084e7bf80a0e"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "kb:exif-facet-aa77ffb8-9f27-4396-abcb-471888ec3d88",
+                    "@type": "uco-observable:EXIFFacet",
+                    "uco-observable:exifData": {
+                        "@id": "kb:controlled-dictionary-a697f6b0-2ab9-4958-9b20-b21dacac2649",
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@id": "kb:controlled-dictionary-entry-e518d8a6-c295-4166-ba9d-1835dcb2a2f4",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "DateTimeDigitized",
+                                "uco-types:value": "2019-01-01 14:20:32"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-55930a82-7d44-4b95-a6f5-aa53d4441660",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Height",
+                                "uco-types:value": "4000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-b184df46-5d6b-4fc9-81dd-79b42295f872",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Width",
+                                "uco-types:value": "6000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-154b8d35-59b5-4f34-8b9a-ea7ff276c4c2",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Make",
+                                "uco-types:value": "Canon"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-7b24f039-8d42-4b32-a2b2-ff3a0499325b",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Model",
+                                "uco-types:value": "PowerShot SX540"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-8548f6ea-f0a5-4007-8602-cad47436bf22",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Orientation",
+                                "uco-types:value": "Horizontal (normal)"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "kb:file-facet-62fd6924-33c1-4dc8-9dd9-8d84b8aecffc",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG_4833.jpg",
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2019-01-01T14:20:32+00:00"
+                    },
+                    "uco-observable:sizeInBytes": 5010291
+                },
+                {
+                    "@id": "kb:raster-picture-facet-7f8d74a8-6c59-488c-b0d8-7782af3af3d1",
+                    "@type": "uco-observable:RasterPictureFacet",
+                    "uco-observable:pictureType": "jpg",
+                    "uco-observable:pictureHeight": 6000,
+                    "uco-observable:pictureWidth": 4000
+                }
+            ]
+        },
+        {
+            "@id": "kb:subject-device-photograph-uuid-6",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:content-data-facet-ad779cec-95e8-4cc9-a88c-14de4681f67c",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:mimeType": "image/jpeg",
+                    "uco-observable:sizeInBytes": 4565505,
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-0c941f0a-241d-56de-941b-e2c8deca9f1e",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "fc0819ed4dcb2af9c85a041a0da11ea6a146dec0b108c09f5e0d41e8ea3bb041"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "kb:exif-facet-71227318-3208-4687-8047-9e02aebe5b87",
+                    "@type": "uco-observable:EXIFFacet",
+                    "uco-observable:exifData": {
+                        "@id": "kb:controlled-dictionary-c67fb262-4f47-499f-b30b-13c5abe09391",
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@id": "kb:controlled-dictionary-entry-59e4a124-f481-43f0-9785-52740fd7a3cf",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "DateTimeDigitized",
+                                "uco-types:value": "2019-01-01 14:21:00"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-41fd1ea7-548a-44d5-b9b1-0996a696a147",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Height",
+                                "uco-types:value": "4000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-0e775e2a-2f64-4cda-af9c-22d88fdc0378",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Width",
+                                "uco-types:value": "6000"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-acde186a-d53f-450b-a66f-7094485c6de5",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Make",
+                                "uco-types:value": "Canon"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-c50c2861-0e39-486c-bdf4-3186cdad4f20",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Model",
+                                "uco-types:value": "PowerShot SX540"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-aecde2c9-d056-4421-806c-dd33bb29333b",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Orientation",
+                                "uco-types:value": "Horizontal (normal)"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "kb:file-facet-2296aad1-9fef-41fa-85cd-1f94ab1b9ab9",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG_4834.jpg",
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2019-01-01T14:21:00+00:00"
+                    },
+                    "uco-observable:sizeInBytes": 4565505
+                },
+                {
+                    "@id": "kb:raster-picture-facet-5612c8db-fd15-45fe-b7b4-357884203025",
+                    "@type": "uco-observable:RasterPictureFacet",
+                    "uco-observable:pictureType": "jpg",
+                    "uco-observable:pictureHeight": 6000,
+                    "uco-observable:pictureWidth": 4000
+                }
+            ]
+        },
+        {
+            "@id": "kb:extracted-file-uuid-1",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:content-data-facet-66ecac5a-1a1b-4ca6-853b-c1659a7e982b",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:mimeType": "image/jpeg",
+                    "uco-observable:sizeInBytes": 2964571,
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-23419e7a-87fc-5f48-b941-615b3723e578",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "a49f0716e610bd0f77543b1e7ca7613e9b31bf32509e854c7ba65b79be502a18"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "kb:exif-facet-f7d7fc1a-67fd-4d86-bdc8-d15a7aac1a1d",
+                    "@type": "uco-observable:EXIFFacet",
+                    "uco-observable:exifData": {
+                        "@id": "kb:controlled-dictionary-af89d93f-6a84-4b23-a768-465c5764863b",
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@id": "kb:controlled-dictionary-entry-1acf6681-1d13-4b5b-b7ce-e51e67a41a0c",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "DateTimeDigitized",
+                                "uco-types:value": "2018-12-15 12:11:54"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-450485f9-11ea-4c40-8aa4-8e81829e84f1",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Height",
+                                "uco-types:value": "2448"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-d108caf7-cb87-49fd-ba2d-dcc1519842c3",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Width",
+                                "uco-types:value": "3264"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-9eb31249-af39-4639-9d25-5eb9d2eb9130",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Make",
+                                "uco-types:value": "Apple"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-05a2d471-43ce-4c74-b4a6-866bcb17977e",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Model",
+                                "uco-types:value": "iPhone 4S"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "kb:file-facet-f6e6bc41-1c47-4bd4-a167-98c1443aac1a",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG_1863.jpg",
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-12-15T12:11:54+00:00"
+                    },
+                    "uco-observable:sizeInBytes": 2964571
+                },
+                {
+                    "@id": "kb:raster-picture-facet-7de1f1fc-fc8c-41d4-920c-7f5930c1e7aa",
+                    "@type": "uco-observable:RasterPictureFacet",
+                    "uco-observable:pictureType": "jpg",
+                    "uco-observable:pictureHeight": 3264,
+                    "uco-observable:pictureWidth": 2448
+                }
+            ]
+        },
+        {
+            "@id": "kb:extracted-file-uuid-2",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:content-data-facet-bcb6c4dd-2419-4d58-94f6-0fdff68e7777",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:mimeType": "image/jpeg",
+                    "uco-observable:sizeInBytes": 3963541,
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-4699b931-a66e-5cb0-9093-31ea93b70ba8",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73a43362938b9824"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "kb:exif-facet-9708a444-492c-480d-a60c-13dfbc3ba442",
+                    "@type": "uco-observable:EXIFFacet",
+                    "uco-observable:exifData": {
+                        "@id": "kb:controlled-dictionary-b31ee53b-e6c3-4155-a971-433107ab6909",
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@id": "kb:controlled-dictionary-entry-1bd03080-03c9-4606-ac2d-6177ea0ae59c",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "DateTimeDigitized",
+                                "uco-types:value": "2018-12-16 08:18:52"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-46c5e46e-53e1-4d78-966a-5b9a4b7f9034",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Height",
+                                "uco-types:value": "2448"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-d579273b-b1e4-4beb-80ea-924e5e3cf727",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Width",
+                                "uco-types:value": "3264"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-784384df-102f-408b-8fd2-fd749859bf34",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Make",
+                                "uco-types:value": "Apple"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-a209e37c-ebb4-45b2-87dc-e7d4a85d9915",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Model",
+                                "uco-types:value": "iPhone 4S"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "kb:file-facet-5f8a7c71-da4d-43a0-a2aa-4e54d8339e3f",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG_1864.jpg",
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-12-16T08:18:52+00:00"
+                    },
+                    "uco-observable:sizeInBytes": 3963541
+                },
+                {
+                    "@id": "kb:raster-picture-facet-5dfee407-d600-41a4-a6df-074d218ec1d2",
+                    "@type": "uco-observable:RasterPictureFacet",
+                    "uco-observable:pictureType": "jpg",
+                    "uco-observable:pictureHeight": 3264,
+                    "uco-observable:pictureWidth": 2448
+                }
+            ]
+        },
+        {
+            "@id": "kb:extracted-file-uuid-3",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:content-data-facet-c28a5033-f69f-440c-b75c-a29d623d45bb",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:mimeType": "image/jpeg",
+                    "uco-observable:sizeInBytes": 4007352,
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-681f5852-ebc6-5b58-a1f4-aa36a5da870c",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "9a171853eee9f8162e480b28c36f7619a2db8539ccfee849b8ec0068aef53789"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "kb:exif-facet-c38d9212-8384-4cd2-a7c3-363a916c77e9",
+                    "@type": "uco-observable:EXIFFacet",
+                    "uco-observable:exifData": {
+                        "@id": "kb:controlled-dictionary-a61d5758-7c3d-4fb0-9daa-061f8da14b05",
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@id": "kb:controlled-dictionary-entry-e08e2ab6-07d0-4c1a-8681-f3c9c2fd8426",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "DateTimeDigitized",
+                                "uco-types:value": "2018-12-16 08:19:01"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-16a33d87-aa7d-45aa-8ca3-52c7c01cc2b9",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Height",
+                                "uco-types:value": "2448"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-3aaa6fa7-10f5-4c87-8732-7d5b0690054b",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Image Width",
+                                "uco-types:value": "3264"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-9af7172d-dd1f-4413-98fc-71face90086e",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Make",
+                                "uco-types:value": "Apple"
+                            },
+                            {
+                                "@id": "kb:controlled-dictionary-entry-fc0dce38-0e3b-44b8-90bf-7ddb14b87986",
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Model",
+                                "uco-types:value": "iPhone 4S"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@id": "kb:file-facet-8d359dfc-2305-4499-abca-fa0fd8406b5c",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG_1865.jpg",
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-12-16T08:19:01+00:00"
+                    },
+                    "uco-observable:sizeInBytes": 4007352
+                },
+                {
+                    "@id": "kb:raster-picture-facet-943738e6-7a6d-43f1-90b4-7dbe2c0ba6d9",
+                    "@type": "uco-observable:RasterPictureFacet",
+                    "uco-observable:pictureType": "jpg",
+                    "uco-observable:pictureHeight": 3264,
+                    "uco-observable:pictureWidth": 2448
+                }
+            ]
+        },
+        {
+            "@id": "kb:file2-uuid-1",
+            "@type": "uco-core:UcoObject",
+            "rdfs:comment": "TODO - This node was entered into the chain of custody as a typo.  It will be removed on deployment of an automated provenance review mechanism."
+        },
+        {
+            "@id": "kb:subject-device-uuid-1",
+            "@type": "uco-observable:Device"
+        }
+    ]
+}

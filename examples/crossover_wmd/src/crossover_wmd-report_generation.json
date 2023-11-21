@@ -1,0 +1,89 @@
+[
+    {
+        "@id": "kb:configuredtool-3549621c-818b-4e27-977c-8375c040fc53",
+        "@type": "uco-tool:ConfiguredTool",
+        "uco-core:name": "Physical Analyser",
+        "uco-tool:toolType": "Analysis",
+        "uco-tool:creator": {
+            "@id": "kb:organization-ff30d83e-ff57-45f9-8d54-e79b323c2e8b"
+        },
+        "uco-tool:version": "7.1.0.106",
+        "uco-configuration:usesConfiguration": {
+            "@id": "kb:Configuration-2afbfbb1-b4d6-4ad5-9691-ff09b9f6eebe",
+            "@type": "uco-configuration:Configuration",
+            "uco-configuration:configurationEntry": [
+                {
+                    "@id": "kb:configuration-entry-f17752eb-4a30-4596-8a7e-e8efba956842",
+                    "@type": "uco-configuration:ConfigurationEntry",
+                    "uco-configuration:itemName": "OutputFormat",
+                    "uco-configuration:itemValue": "XML"
+                }
+            ]
+        }
+    },
+    {
+        "@id": "kb:investigativeaction-b4b0805e-84ec-4553-98c2-6f0454829c30",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:name": "exported",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2020-04-12T11:27:12.00Z"
+        },
+        "uco-core:endTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2020-04-12T11:32:12.00Z"
+        },
+        "uco-action:location": {
+            "@id": "kb:esc-lausanne-c3b211ae-6a46-4312-a3c2-b5181e565161"
+        },
+        "uco-action:performer": {
+            "@id": "kb:investigator-10b3d2da-e801-4afe-b70a-61f16a75e68b"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:configuredtool-3549621c-818b-4e27-977c-8375c040fc53"
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-c782630d-a0c6-4b5b-b1df-bdd514d27bb2"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:provenance-record-e64b7aed-cecb-4291-81d4-4adb5b8020b2"
+            },
+            {
+                "@id": "kb:forensicimage-f3fd304e-ef6c-4cbd-94cb-425880f82748"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:provenancerecord-4dee4ff5-bc77-4dad-a785-05b147149678"
+            },
+            {
+                "@id": "kb:cellebritexml-report-ab6beb0b-2fcc-4326-8685-1159c7ea6deb"
+            }
+        ]
+    },
+    {
+        "@id": "kb:cellebritexml-report-ab6beb0b-2fcc-4326-8685-1159c7ea6deb",
+        "@type": "uco-observable:File",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:file-facet-56a66502-4585-46c5-bfe0-4f81366e6f25",
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:observableCreatedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2020-05-16T10:12.40Z"
+                },
+                "uco-observable:extension": "xml",
+                "uco-observable:fileName": "19_UFED_ANDROID_CROSSOVER.xml",
+                "uco-observable:isDirectory": false
+            }
+        ]
+    },
+    {
+        "@id": "kb:provenancerecord-4dee4ff5-bc77-4dad-a785-05b147149678",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": {
+            "@id": "kb:cellebritexml-report-ab6beb0b-2fcc-4326-8685-1159c7ea6deb"
+        }
+    }
+]

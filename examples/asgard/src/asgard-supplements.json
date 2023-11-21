@@ -1,0 +1,50 @@
+[
+    {
+        "@id": "kb:asgard-bifrost-e4bf5ac0-a8b1-490f-930b-38593e87d5b8",
+        "@type": "uco-location:Location"
+    },
+    {
+        "@id": "kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f",
+        "@type": "uco-identity:Person"
+    },
+    {
+        "@id": "kb:location-f67042d4-4963-4c31-9807-23662670004f",
+        "@type": "uco-location:Location"
+    },
+    {
+        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4",
+        "@type": "uco-identity:Organization"
+    },
+    {
+        "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90",
+        "@type": "uco-observable:PhoneAccount"
+    },
+    {
+        "@id": "kb:mobileaccount-96f8460f-760e-49cb-adad-bb4a0840fb63",
+        "@type": "uco-observable:PhoneAccount"
+    },
+    {
+        "@id": "kb:mobileaccount-48c627e7-03c9-44d2-9731-2bbf08029c7d",
+        "@type": "uco-observable:PhoneAccount"
+    },
+    {
+        "@id": "kb:destination-host-7f441a17-1c72-4caf-b5e2-f1a08f5dfa82",
+        "@type": "uco-observable:Device"
+    },
+    {
+        "@id": "kb:investigator-899bb310-f5cd-4ab5-9e96-1234a37ed1da",
+        "@type": "case-investigation:Investigator"
+    },
+    {
+        "@id": "kb:application1-8538c226-1ba5-473b-8342-96150a4ab4ed",
+        "@type": "uco-observable:Application"
+    },
+    {
+        "@id": "kb:source-host-d77fdc61-b382-4aad-98fd-6dbf8cadd2bf",
+        "@type": "uco-observable:Device"
+    },
+    {
+        "@id": "kb:diskpartition-f49304c6-a9c7-4aa2-9860-a68d78ae838a",
+        "@type": "uco-observable:FileSystem"
+    }
+]

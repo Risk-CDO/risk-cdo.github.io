@@ -1,0 +1,126 @@
+[
+    {
+        "@id": "kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:name": "acquired",
+        "uco-core:description": "Suspect device physical acquisition",
+        "uco-action:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2019-03-30T22:17:31Z"
+        },
+        "uco-action:endTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2019-03-30T22:47:32Z"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516"
+        },
+        "uco-action:location": {
+            "@id": "kb:location-f67042d4-4963-4c31-9807-23662670004f"
+        },
+        "uco-action:performer": {
+            "@id": "kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f"
+            },
+            {
+                "@id": "kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07"
+            },
+            {
+                "@id": "kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53"
+            }
+        ]
+    },
+    {
+        "@id": "kb:person-38cb4243-bc7e-48a4-91b0-9d296b8f862a",
+        "@type": "uco-identity:Person",
+        "uco-core:name": "Harald"
+    },
+    {
+        "@id": "kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516",
+        "@type": "uco-tool:ConfiguredTool",
+        "uco-core:name": "Embedded Device Extrator",
+        "uco-tool:toolType": "Extraction",
+        "uco-tool:creator": {
+            "@id": "kb:person-38cb4243-bc7e-48a4-91b0-9d296b8f862a"
+        },
+        "uco-tool:version": "1.2.0",
+        "uco-configuration:usesConfiguration": {
+            "@id": "kb:configuration-23657472-c4c9-472b-835c-a105e8832064",
+            "@type": "uco-configuration:Configuration",
+            "uco-configuration:configurationEntry": [
+                {
+                    "@id": "kb:configuration-entry-edd150cb-a355-4990-b402-4784f004d2e8",
+                    "@type": "uco-configuration:ConfigurationEntry",
+                    "uco-configuration:itemName": "ExtractionMethod",
+                    "uco-configuration:itemValue": "iOS_Backup"
+                },
+                {
+                    "@id": "kb:configuration-entry-fa517033-8d94-434c-85e9-778246de5b7d",
+                    "@type": "uco-configuration:ConfigurationEntry",
+                    "uco-configuration:itemName": "ExtractionType",
+                    "uco-configuration:itemValue": "File SystemMD5"
+                }
+            ]
+        }
+    },
+    {
+        "@id": "kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:description": "Suspect device found near Bifrost Bridge after disruption",
+        "case-investigation:exhibitNumber": "AsgardPD-20190330-001A",
+        "uco-core:object": [
+            {
+                "@id": "kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07"
+            }
+        ]
+    },
+    {
+        "@id": "kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07",
+        "@type": [
+            "uco-observable:File",
+            "uco-observable:Image"
+        ],
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:file-facet-5a498a1f-7e9d-46b9-8953-174226298969",
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:observableCreatedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2019-03-30T22:12:19.32Z"
+                },
+                "uco-observable:extension": "dd",
+                "uco-observable:fileName": "AsgardPD-2019033001-01.dd",
+                "uco-observable:filePath": "C:/evidence/AsgardPD-2019033001-01.dd",
+                "uco-observable:isDirectory": false,
+                "uco-observable:sizeInBytes": 160080500
+            },
+            {
+                "@id": "kb:content-data-facet-63dc506b-76ba-470d-ac6d-f51e93f40767",
+                "@type": "uco-observable:ContentDataFacet",
+                "uco-observable:hash": [
+                    {
+                        "@id": "kb:hash-bfa02feb-6184-5ca5-9ba3-272bf4367c5d",
+                        "@type": "uco-types:Hash",
+                        "uco-types:hashMethod": {
+                            "@type": "uco-vocabulary:HashNameVocab",
+                            "@value": "SHA256"
+                        },
+                        "uco-types:hashValue": {
+                            "@type": "xsd:hexBinary",
+                            "@value": "7ea081166336119da78ee4bbdbd06840b94efe28988a2bdb0bcf2387a481e283"
+                        }
+                    }
+                ],
+                "uco-observable:sizeInBytes": 9080500
+            }
+        ]
+    }
+]

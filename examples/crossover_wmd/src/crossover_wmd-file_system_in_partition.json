@@ -1,0 +1,21 @@
+[
+    {
+        "@id": "kb:filesystem-440e36cc-7451-4cf1-9db0-1a8ca8537a1c",
+        "@type": "uco-observable:FileSystem",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:disk-partition-facet-3b9dd6e4-29ea-42c4-88de-9056790f5de3",
+                "@type": "uco-observable:DiskPartitionFacet",
+                "uco-observable:diskPartitionType": "GPT",
+                "uco-observable:partitionID": "06",
+                "uco-observable:partitionOffset": 541196288,
+                "uco-observable:partitionLength": 3456630784
+            },
+            {
+                "@id": "kb:file-system-facet-179b7a12-7086-4a11-94f9-1b2bec8a48a4",
+                "@type": "uco-observable:FileSystemFacet",
+                "uco-observable:fileSystemType": "EXT3"
+            }
+        ]
+    }
+]

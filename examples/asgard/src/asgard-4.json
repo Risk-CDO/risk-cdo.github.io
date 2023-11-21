@@ -1,0 +1,54 @@
+[
+    {
+        "@id": "kb:smsmessage-21b3e39d-772d-47b0-8501-a6945ddbdfcd",
+        "@type": "uco-observable:SMSMessage",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:message-facet-7d687eb6-4b97-4a4d-be1c-e73e0a403f08",
+                "@type": "uco-observable:MessageFacet",
+                "uco-observable:application": {
+                    "@id": "kb:application1-8538c226-1ba5-473b-8342-96150a4ab4ed"
+                },
+                "uco-observable:messageText": "Yo dude! This is my new number.",
+                "uco-observable:from": {
+                    "@id": "kb:mobileaccount-96f8460f-760e-49cb-adad-bb4a0840fb63"
+                },
+                "uco-observable:to": [
+                    {
+                        "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90"
+                    }
+                ],
+                "uco-observable:sentTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2010-01-15T17:59:43.25Z"
+                }
+            }
+        ]
+    },
+    {
+        "@id": "kb:call-3e3e316c-25dd-4651-98a2-fc3422e577f7",
+        "@type": "uco-observable:Call",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:call-facet-a33cdd2c-af4a-45f9-8778-1d14c1dd50d6",
+                "@type": "uco-observable:CallFacet",
+                "uco-observable:callType": "mobile",
+                "uco-observable:startTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2010-01-15T17:59:43.25Z"
+                },
+                "uco-observable:endTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2010-01-15T18:30:41.25Z"
+                },
+                "uco-observable:from": {
+                    "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90"
+                },
+                "uco-observable:to": {
+                    "@id": "kb:mobileaccount-48c627e7-03c9-44d2-9731-2bbf08029c7d"
+                },
+                "uco-observable:duration": 1862
+            }
+        ]
+    }
+]

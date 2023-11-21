@@ -1,0 +1,49 @@
+[
+    {
+        "@id": "kb:simcard1-relationship-af318ae5-b792-4297-b1c3-74e5bbd9b018",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:simcard-b0252511-4875-4e2e-a27f-d95c35d87c1f"
+        },
+        "uco-core:target": {
+            "@id": "kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4"
+        },
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2018-11-16T12:34:28Z"
+        },
+        "uco-core:endTime": null,
+        "uco-core:isDirectional": true
+    },
+    {
+        "@id": "kb:simcard3-relationship-dfba6daa-26fd-4a3e-9638-d85c32f17e2f",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:simcard-b0252511-4875-4e2e-a27f-d95c35d87c1f"
+        },
+        "uco-core:target": {
+            "@id": "kb:mobiledevice-803df237-bc7e-4e24-a5cb-8157063014b4"
+        },
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2018-11-16T00:00.00Z"
+        },
+        "uco-core:endTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2018-12-11T08:40:00.00Z"
+        },
+        "uco-core:isDirectional": true,
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:confidence-facet-97f455f3-ae63-4e87-b135-8798be7cc537",
+                "@type": "uco-core:ConfidenceFacet",
+                "uco-core:confidence": {
+                    "@type": "xsd:nonNegativeInteger",
+                    "@value": "95"
+                }
+            }
+        ]
+    }
+]

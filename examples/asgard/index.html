@@ -1,0 +1,588 @@
+---
+<!-- layout: releases -->
+title: Examples
+jumbo_desc: CASE Objects in the Real World
+custom_css:
+  - smart_wizard
+  - smart_wizard_theme_arrows
+custom_js:
+  - jquery.smartWizard
+  - examples
+---
+
+<p>The JSON-LD data on this page are available combined in the file <a href="asgard.json">asgard.json</a>.</p>
+<div id="smartwizard">
+  <ul>
+      <li><a href="#step-0">Step 0<br /><small>Starting a Cyber-investigation</small></a></li>
+      <li><a href="#step-1">Step 1<br /><small>Evidence Seizure &amp; Chain of Custody</small></a></li>
+      <li><a href="#step-2">Step 2<br /><small>Evidence Acquisition</small></a></li>
+      <li><a href="#step-3">Step 3<br /><small>Evidence Extraction</small></a></li>
+  </ul>
+
+  <div>
+    <div id="step-0" class="">
+      <h3 class="pt-3">Starting a Cyber-investigation</h3>
+      <p class="mb-3">When an investigation is initiated, the description and authorization are represented using a CASE
+        Investigation object. Any information related to a cyber-investigation must be wrapped within a CASE bundle.</p>
+      <h6>Examples of an Authorization &amp; Investigation Objects</h6>
+{% highlight json %}
+{
+    "__CASE__": "ASGARD_2019_00162",
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "@vocab": "http://example.org/ontology/local#",
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "drafting": "http://example.org/ontology/drafting/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-configuration": "https://ontology.unifiedcyberontology.org/uco/configuration/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@id": "kb:bundle-616a3d68-eb5e-4b0b-86e4-acd062c8022e",
+    "@type": "uco-core:Bundle",
+    "uco-core:description": "Initial evidence seizure in cross border investigation into disruption of public transportation service",
+    "uco-core:object": [
+        {
+            "@id": "kb:authorization-10c1cf73-54e7-4bc4-953f-f93d5408b614",
+            "@type": "case-investigation:Authorization",
+            "case-investigation:relevantAuthorization": [
+                {
+                    "@id": "kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0",
+                    "@type": "case-investigation:Authorization",
+                    "case-investigation:authorizationType": "Odin_Decree",
+                    "case-investigation:authorizationIdentifier": "Decree_2019_00013",
+                    "drafting:authorizationAuthority": {
+                        "@id": "kb:organization-e2322f63-96cb-4fd4-8ddc-351a9826598e"
+                    },
+                    "drafting:authorizationIssuedDate": {
+                        "@type": "xsd:date",
+                        "@value": "2019-03-30"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:investigation-38851327-125e-4710-a5a0-79c2b3a88295",
+            "@type": "case-investigation:Investigation",
+            "uco-core:name": "ASGARD_2018_00162",
+            "case-investigation:focus": "Denial of Service (Bifrost Bridge)",
+            "uco-core:description": "An unknown person caused public disturbance and physical damage to property in Asgard, resulting in denial of service of public transportation (Bifrost Bridge).",
+            "uco-core:object": [
+                {
+                    "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f"
+                },
+                {
+                    "@id": "kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa"
+                },
+                {
+                    "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90"
+                },
+                {
+                    "@id": "kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07"
+                },
+                {
+                    "@id": "kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53"
+                },
+                {
+                    "@id": "kb:file-mmssms-dcec8d09-a8bc-4b7c-93ab-16c7b363d48b"
+                },
+                {
+                    "@id": "kb:smsmessage-21b3e39d-772d-47b0-8501-a6945ddbdfcd"
+                },
+                {
+                    "@id": "kb:call-3e3e316c-25dd-4651-98a2-fc3422e577f7"
+                },
+                {
+                    "@id": "kb:networkconnection-9ad57807-8ddd-427a-8985-0b391c0c5179"
+                }
+            ]
+        }
+    ]
+}
+{% endhighlight %}
+      <p class="pb-3">An Investigation can contain any CASE object, including InvestigativeActions and Traces.</p>
+    </div>
+    <div id="step-1" class="">
+      <h3 class="pt-3">Evidence Seizure &amp; Chain of Custody</h3>
+      <p class="mb-3">When a device is first touched, this is represented using an InvestigativeAction with an empty input to indicate that this is the
+        beginning of Chain of Custody. The output of this InvestigativeAction is the seized object and an associated provenance record.</p>
+      <h6>Examples of an InvestigativeAction &amp; ProvenanceRecord Objects</h6>
+{% highlight json %}
+[
+    {
+        "@id": "kb:investigativeaction-3f7f68f0-f68d-48db-be09-45c1239b0fdd",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:name": "preserved",
+        "uco-action:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2019-03-30T22:36:24.35Z"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:odin-decree-c75747d0-d0e9-4ef4-a868-ba6cf9097ac0"
+        },
+        "uco-action:location": {
+            "@id": "kb:asgard-bifrost-e4bf5ac0-a8b1-490f-930b-38593e87d5b8"
+        },
+        "uco-action:performer": {
+            "@id": "kb:investigator-899bb310-f5cd-4ab5-9e96-1234a37ed1da"
+        },
+        "uco-action:object": [],
+        "uco-action:result": [
+            {
+                "@id": "kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa"
+            },
+            {
+                "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f"
+            }
+        ]
+    },
+    {
+        "@id": "kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:description": "Suspect device found near Bifrost Bridge after disruption",
+        "case-investigation:exhibitNumber": "AsgardPD-20190330-001A",
+        "uco-core:object": [
+            {
+                "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f"
+            }
+        ]
+    },
+    {
+        "@id": "kb:organization-92feec0e-e2d0-4a98-bf47-dd0809265611",
+        "@type": "uco-identity:Organization",
+        "uco-core:name": "Apple"
+    },
+    {
+        "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f",
+        "@type": "uco-observable:Device",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:device-facet-10a08c82-0e17-4aa7-88c1-d6b64b06472c",
+                "@type": "uco-observable:DeviceFacet",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-92feec0e-e2d0-4a98-bf47-dd0809265611"
+                },
+                "uco-observable:deviceType": "iPhone",
+                "uco-observable:model": "MG552",
+                "uco-observable:serialNumber": "F18Q4LGRG5MD"
+            },
+            {
+                "@id": "kb:mobile-device-facet-20e46067-250b-4a09-a829-5a15cbcfd6c9",
+                "@type": "uco-observable:MobileDeviceFacet",
+                "uco-observable:keypadUnlockCode": "123789",
+                "uco-observable:IMEI": "359305065690067",
+                "uco-observable:clockSetting": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2019-03-30T22:36:24.35Z"
+                },
+                "drafting:localeLanguage": "no_AS",
+                "uco-observable:phoneActivationTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-05-09T07:36:24.35Z"
+                },
+                "uco-observable:storageCapacityInBytes": 17179869184
+            },
+            {
+                "@id": "kb:iPhone-device-facet-2263ff04-4025-42ba-a30c-58eb98f84fe2",
+                "@type": [
+                    "drafting:iPhoneDeviceFacet",
+                    "uco-core:Facet"
+                ],
+                "drafting:uniqueID": "B3858A69A29375E6C706226B3633A3A11EB2A774",
+                "drafting:ownerName": "Loki iPhone"
+            },
+            {
+                "@id": "kb:operating-system-facet-262f1b31-e23d-4324-84cb-5d55528caf63",
+                "@type": "uco-observable:OperatingSystemFacet",
+                "uco-core:name": "iOS",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                },
+                "uco-observable:version": "10.3"
+            },
+            {
+                "@id": "kb:wifi-address-facet-27d5903b-0037-4a98-acad-4f5003461899",
+                "@type": "uco-observable:WifiAddressFacet",
+                "uco-observable:addressValue": "d0:33:11:13:e7:a1"
+            },
+            {
+                "@id": "kb:bluetooth-address-facet-287af7ea-756d-4094-8ed9-fcad5e70bee4",
+                "@type": "uco-observable:BluetoothAddressFacet",
+                "uco-observable:addressValue": "d0:33:11:13:e7:a2"
+            }
+        ]
+    },
+    {
+        "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90",
+        "@type": "uco-observable:MobileAccount",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:account-facet-31df5a8a-fb9f-4fa6-85f9-cea13f4b9f03",
+                "@type": "uco-observable:AccountFacet",
+                "uco-observable:accountType": "Phone",
+                "uco-observable:isActive": true
+            },
+            {
+                "@id": "kb:mobile-account-facet-50320fc0-d112-4720-9f20-93843d84f3b3",
+                "@type": "uco-observable:MobileAccountFacet",
+                "uco-observable:MSISDN": "1239275339"
+            }
+        ]
+    },
+    {
+        "@id": "kb:relationship-68d4edd7-3aca-449b-8f6d-261f8c70ca08",
+        "@type": "uco-core:Relationship",
+        "uco-core:source": {
+            "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f"
+        },
+        "uco-core:target": {
+            "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90"
+        },
+        "uco-core:kindOfRelationship": "Has_Account",
+        "uco-core:isDirectional": true
+    }
+]
+{% endhighlight %}
+      <p class="pb-3">All CASE objects are inserted within the associated Investigation, wrapped in a CASE Bundle.</p>
+    </div>
+    <div id="step-2" class="">
+      <h3 class="pt-3">Evidence Acquisition</h3>
+      <p class="mb-3">The tool used to acquire data, options used, and the resulting forensic copy are represented as an
+          <em><strong>InvestigativeAction</strong></em> and associated Tool using CASE.</p>
+      <h6>Example of an InvestigativeAction</h6>
+{% highlight json %}
+[
+    {
+        "@id": "kb:investigativeaction-67f43664-077d-47be-b332-4d1c2b579c49",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:name": "acquired",
+        "uco-core:description": "Suspect device physical acquisition",
+        "uco-action:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2019-03-30T22:17:31Z"
+        },
+        "uco-action:endTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2019-03-30T22:47:32Z"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516"
+        },
+        "uco-action:location": {
+            "@id": "kb:location-f67042d4-4963-4c31-9807-23662670004f"
+        },
+        "uco-action:performer": {
+            "@id": "kb:forensicexaminer-acf60326-de21-4a85-9909-692f1780470f"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:device-9420af3b-4d3a-4239-88fc-d33feec8dc4f"
+            },
+            {
+                "@id": "kb:provenancerecord-c2b73229-9cc1-477a-9024-8117e18d97fa"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07"
+            },
+            {
+                "@id": "kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53"
+            }
+        ]
+    },
+    {
+        "@id": "kb:person-38cb4243-bc7e-48a4-91b0-9d296b8f862a",
+        "@type": "uco-identity:Person",
+        "uco-core:name": "Harald"
+    },
+    {
+        "@id": "kb:configuredtool-4c21b431-1746-410b-bc54-f2fd6a9b2516",
+        "@type": "uco-tool:ConfiguredTool",
+        "uco-core:name": "Embedded Device Extrator",
+        "uco-tool:toolType": "Extraction",
+        "uco-tool:creator": {
+            "@id": "kb:person-38cb4243-bc7e-48a4-91b0-9d296b8f862a"
+        },
+        "uco-tool:version": "1.2.0",
+        "uco-configuration:usesConfiguration": {
+            "@id": "kb:configuration-23657472-c4c9-472b-835c-a105e8832064",
+            "@type": "uco-configuration:Configuration",
+            "uco-configuration:configurationEntry": [
+                {
+                    "@id": "kb:configuration-entry-edd150cb-a355-4990-b402-4784f004d2e8",
+                    "@type": "uco-configuration:ConfigurationEntry",
+                    "uco-configuration:itemName": "ExtractionMethod",
+                    "uco-configuration:itemValue": "iOS_Backup"
+                },
+                {
+                    "@id": "kb:configuration-entry-fa517033-8d94-434c-85e9-778246de5b7d",
+                    "@type": "uco-configuration:ConfigurationEntry",
+                    "uco-configuration:itemName": "ExtractionType",
+                    "uco-configuration:itemValue": "File SystemMD5"
+                }
+            ]
+        }
+    },
+    {
+        "@id": "kb:provenancerecord-a2a5098c-43fd-4556-a437-2d3ddb821a53",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:description": "Suspect device found near Bifrost Bridge after disruption",
+        "case-investigation:exhibitNumber": "AsgardPD-20190330-001A",
+        "uco-core:object": [
+            {
+                "@id": "kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07"
+            }
+        ]
+    },
+    {
+        "@id": "kb:forensicimage-68b52e60-1f7f-4f22-8c5e-dd0492d3ee07",
+        "@type": [
+            "uco-observable:File",
+            "uco-observable:Image"
+        ],
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:file-facet-5a498a1f-7e9d-46b9-8953-174226298969",
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:observableCreatedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2019-03-30T22:12:19.32Z"
+                },
+                "uco-observable:extension": "dd",
+                "uco-observable:fileName": "AsgardPD-2019033001-01.dd",
+                "uco-observable:filePath": "C:/evidence/AsgardPD-2019033001-01.dd",
+                "uco-observable:isDirectory": false,
+                "uco-observable:sizeInBytes": 160080500
+            },
+            {
+                "@id": "kb:content-data-facet-63dc506b-76ba-470d-ac6d-f51e93f40767",
+                "@type": "uco-observable:ContentDataFacet",
+                "uco-observable:hash": [
+                    {
+                        "@id": "kb:hash-bfa02feb-6184-5ca5-9ba3-272bf4367c5d",
+                        "@type": "uco-types:Hash",
+                        "uco-types:hashMethod": {
+                            "@type": "uco-vocabulary:HashNameVocab",
+                            "@value": "SHA256"
+                        },
+                        "uco-types:hashValue": {
+                            "@type": "xsd:hexBinary",
+                            "@value": "7ea081166336119da78ee4bbdbd06840b94efe28988a2bdb0bcf2387a481e283"
+                        }
+                    }
+                ],
+                "uco-observable:sizeInBytes": 9080500
+            }
+        ]
+    }
+]
+{% endhighlight %}
+      <p class="pb-3">[placeholder for dc3dd wrapper]</p>
+    </div>
+    <div id="step-3" class="">
+      <h3 class="pt-3">Evidence Extraction</h3>
+      <p class="mb-3">Information extracted from a forensic copy of digital evidence, along with the tool used, can be represented using CASE.</p>
+
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Filesystem</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Mobile Device</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Network Traffic</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <h6 class="mt-3">Example of a Filesystem Trace</h6>
+          <p>Note that the file size in the <code>File</code> property bundle is greater than the size in the <code>ContentData</code> property bundle.  This highlights the context-sensitive difference in purpose of <code>sizeInBytes</code>.  In <code>File</code>, the size represents the file system's record of the file's size.  In <code>ContentData</code>, the size represents the measurable size of extracted or extractable file content.  The latter can be less than the file system reports due to, for instance, a faulty storage device.</p>
+{% highlight json %}
+[
+    {
+        "@id": "kb:file-mmssms-dcec8d09-a8bc-4b7c-93ab-16c7b363d48b",
+        "@type": "uco-observable:File",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:file-facet-68004de9-1139-405f-aea7-2c05f3a84709",
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:observableCreatedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2019-03-30T08:12:19.32Z"
+                },
+                "uco-observable:extension": "db",
+                "uco-observable:fileName": "/mobile/sms.db",
+                "uco-observable:isDirectory": false,
+                "uco-observable:sizeInBytes": 142925
+            },
+            {
+                "@id": "kb:content-data-facet-7084b3d6-8c49-4452-b387-b753aaff95f1",
+                "@type": "uco-observable:ContentDataFacet",
+                "uco-observable:sizeInBytes": 122925,
+                "uco-observable:magicNumber": "U1FMaXRlIGZvcm1hdCAzAA==",
+                "uco-observable:hash": [
+                    {
+                        "@id": "kb:hash-c6cc7dd6-1bf9-5454-9653-37caff09411d",
+                        "@type": "uco-types:Hash",
+                        "uco-types:hashMethod": {
+                            "@type": "uco-vocabulary:HashNameVocab",
+                            "@value": "SHA256"
+                        },
+                        "uco-types:hashValue": {
+                            "@type": "xsd:hexBinary",
+                            "@value": "a13225720074371d56a4f4d5117fbb4953c5b1d316b31f21edcb7ed8fdf66c6e"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "kb:relationship3-64625b2b-a64e-4ea0-90f0-216dc5f51306",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:file-mmssms-dcec8d09-a8bc-4b7c-93ab-16c7b363d48b"
+        },
+        "uco-core:target": [
+            {
+                "@id": "kb:diskpartition-f49304c6-a9c7-4aa2-9860-a68d78ae838a"
+            }
+        ],
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:isDirectional": true,
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:path-relation-facet-79e5625d-5fd3-4e17-bc0c-2ac3dd5d37e9",
+                "@type": "uco-observable:PathRelationFacet",
+                "uco-observable:path": "/mobile/sms.db"
+            }
+        ]
+    }
+]
+{% endhighlight %}
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <h6 class="mt-3">Example of a Mobile Device Trace</h6>
+{% highlight json %}
+[
+    {
+        "@id": "kb:smsmessage-21b3e39d-772d-47b0-8501-a6945ddbdfcd",
+        "@type": "uco-observable:SMSMessage",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:message-facet-7d687eb6-4b97-4a4d-be1c-e73e0a403f08",
+                "@type": "uco-observable:MessageFacet",
+                "uco-observable:application": {
+                    "@id": "kb:application1-8538c226-1ba5-473b-8342-96150a4ab4ed"
+                },
+                "uco-observable:messageText": "Yo dude! This is my new number.",
+                "uco-observable:from": {
+                    "@id": "kb:mobileaccount-96f8460f-760e-49cb-adad-bb4a0840fb63"
+                },
+                "uco-observable:to": [
+                    {
+                        "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90"
+                    }
+                ],
+                "uco-observable:sentTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2010-01-15T17:59:43.25Z"
+                }
+            }
+        ]
+    },
+    {
+        "@id": "kb:call-3e3e316c-25dd-4651-98a2-fc3422e577f7",
+        "@type": "uco-observable:Call",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:call-facet-a33cdd2c-af4a-45f9-8778-1d14c1dd50d6",
+                "@type": "uco-observable:CallFacet",
+                "uco-observable:callType": "mobile",
+                "uco-observable:startTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2010-01-15T17:59:43.25Z"
+                },
+                "uco-observable:endTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2010-01-15T18:30:41.25Z"
+                },
+                "uco-observable:from": {
+                    "@id": "kb:mobileaccount-74b4e46a-bee3-48f7-a5db-a6178d92aa90"
+                },
+                "uco-observable:to": {
+                    "@id": "kb:mobileaccount-48c627e7-03c9-44d2-9731-2bbf08029c7d"
+                },
+                "uco-observable:duration": 1862
+            }
+        ]
+    }
+]
+{% endhighlight %}
+        </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+          <h6 class="mt-3">Example of a Network Traffic Trace</h6>
+{% highlight json %}
+[
+    {
+        "@id": "kb:networkconnection-9ad57807-8ddd-427a-8985-0b391c0c5179",
+        "@type": "uco-observable:NetworkConnection",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:network-connection-facet-a9497bfe-6857-45ac-933d-365a48285f9b",
+                "@type": "uco-observable:NetworkConnectionFacet",
+                "uco-observable:startTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2009-04-03T02:29:25.6256260Z"
+                },
+                "uco-observable:endTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2009-04-03T02:29:25.6365510Z"
+                },
+                "uco-observable:dst": {
+                    "@id": "kb:destination-host-7f441a17-1c72-4caf-b5e2-f1a08f5dfa82"
+                },
+                "uco-observable:destinationPort": 139,
+                "uco-observable:src": {
+                    "@id": "kb:source-host-d77fdc61-b382-4aad-98fd-6dbf8cadd2bf"
+                },
+                "uco-observable:sourcePort": 52960,
+                "uco-observable:protocols": {
+                    "@id": "kb:controlled-dictionary-b3623b4f-3e80-4a19-ae24-e8b27c1e4256",
+                    "@type": "uco-types:ControlledDictionary",
+                    "uco-types:entry": [
+                        {
+                            "@id": "kb:controlled-dictionary-entry-e54471c3-9a89-4e88-9a52-3cee0e5ab0a2",
+                            "@type": "uco-types:ControlledDictionaryEntry",
+                            "uco-types:key": "Transport Layer",
+                            "uco-types:value": "TCP"
+                        },
+                        {
+                            "@id": "kb:controlled-dictionary-entry-ebe701c9-f93e-46d9-9d8a-2d8f6ac4e7b3",
+                            "@type": "uco-types:ControlledDictionaryEntry",
+                            "uco-types:key": "Session Layer",
+                            "uco-types:value": "NETBIOSSESSIONSERVICE"
+                        }
+                    ]
+                },
+                "connectionState": "APSF"
+            }
+        ]
+    }
+]
+{% endhighlight %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

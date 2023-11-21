@@ -1,0 +1,65 @@
+[
+    {
+        "@id": "kb:filesystem-relationship-d26cce22-bae1-4d34-ac01-6620f8bdd6b9",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:file-f7cad990-6687-4849-89dc-55795675f3f5"
+        },
+        "uco-core:target": {
+            "@id": "kb:filesystem-440e36cc-7451-4cf1-9db0-1a8ca8537a1c"
+        },
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:isDirectional": true,
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:path-relation-facet-44a7738f-f00d-4ae6-9a71-0f18e5a40bec",
+                "@type": "uco-observable:PathRelationFacet",
+                "uco-observable:path": "/Root/data/com.google.android.gms/app_dg_cache/B0970DD8CBD5F4763E7C602156284D4DD796AE5D/the.apk"
+            },
+            {
+                "@id": "kb:data-range-facet-625fdfe2-a48e-4117-8166-2985a904fb43",
+                "@type": "uco-observable:DataRangeFacet",
+                "uco-observable:rangeOffset": 3121610752,
+                "uco-observable:rangeSize": 147871
+            }
+        ]
+    },
+    {
+        "@id": "kb:filesystem-6c344839-2ee8-4d63-851b-6710a35c33ac",
+        "@type": "uco-observable:FileSystem",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:disk-partition-facet-7eb4b7cf-35ab-4b71-ad45-428b53db9b44",
+                "@type": "uco-observable:DiskPartitionFacet",
+                "uco-observable:diskPartitionType": "GPT",
+                "uco-observable:partitionID": "06",
+                "uco-observable:partitionOffset": 63,
+                "uco-observable:partitionLength": 245235063
+            },
+            {
+                "@id": "kb:file-system-facet-d14c4ae7-75e4-4043-97c5-e16b383ca714",
+                "@type": "uco-observable:FileSystemFacet",
+                "uco-observable:fileSystemType": "EXT3"
+            },
+            {
+                "@id": "kb:content-data-facet-bba72ec6-1c79-46d7-aa22-ef833d3127d6",
+                "@type": "uco-observable:ContentDataFacet",
+                "uco-observable:sizeInBytes": 245235000,
+                "uco-observable:hash": [
+                    {
+                        "@id": "kb:hash-1a6175e1-cef7-5ee3-8703-22f5f7a43603",
+                        "@type": "uco-types:Hash",
+                        "uco-types:hashMethod": {
+                            "@type": "uco-vocabulary:HashNameVocab",
+                            "@value": "SHA256"
+                        },
+                        "uco-types:hashValue": {
+                            "@type": "xsd:hexBinary",
+                            "@value": "0611ea093d19b1c73a5285ff43741dd77f2a8d983c1c71044eb072e44f5dcb0a"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

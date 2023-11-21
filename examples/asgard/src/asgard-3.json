@@ -1,0 +1,61 @@
+[
+    {
+        "@id": "kb:file-mmssms-dcec8d09-a8bc-4b7c-93ab-16c7b363d48b",
+        "@type": "uco-observable:File",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:file-facet-68004de9-1139-405f-aea7-2c05f3a84709",
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:observableCreatedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2019-03-30T08:12:19.32Z"
+                },
+                "uco-observable:extension": "db",
+                "uco-observable:fileName": "/mobile/sms.db",
+                "uco-observable:isDirectory": false,
+                "uco-observable:sizeInBytes": 142925
+            },
+            {
+                "@id": "kb:content-data-facet-7084b3d6-8c49-4452-b387-b753aaff95f1",
+                "@type": "uco-observable:ContentDataFacet",
+                "uco-observable:sizeInBytes": 122925,
+                "uco-observable:magicNumber": "U1FMaXRlIGZvcm1hdCAzAA==",
+                "uco-observable:hash": [
+                    {
+                        "@id": "kb:hash-c6cc7dd6-1bf9-5454-9653-37caff09411d",
+                        "@type": "uco-types:Hash",
+                        "uco-types:hashMethod": {
+                            "@type": "uco-vocabulary:HashNameVocab",
+                            "@value": "SHA256"
+                        },
+                        "uco-types:hashValue": {
+                            "@type": "xsd:hexBinary",
+                            "@value": "a13225720074371d56a4f4d5117fbb4953c5b1d316b31f21edcb7ed8fdf66c6e"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "kb:relationship3-64625b2b-a64e-4ea0-90f0-216dc5f51306",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:file-mmssms-dcec8d09-a8bc-4b7c-93ab-16c7b363d48b"
+        },
+        "uco-core:target": [
+            {
+                "@id": "kb:diskpartition-f49304c6-a9c7-4aa2-9860-a68d78ae838a"
+            }
+        ],
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:isDirectional": true,
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:path-relation-facet-79e5625d-5fd3-4e17-bc0c-2ac3dd5d37e9",
+                "@type": "uco-observable:PathRelationFacet",
+                "uco-observable:path": "/mobile/sms.db"
+            }
+        ]
+    }
+]

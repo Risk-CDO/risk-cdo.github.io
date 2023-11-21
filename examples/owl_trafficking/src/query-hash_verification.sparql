@@ -1,0 +1,38 @@
+PREFIX case-investigation: <https://ontology.caseontology.org/case/investigation/>
+PREFIX uco-action: <https://ontology.unifiedcyberontology.org/uco/action/>
+PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+PREFIX uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/>
+PREFIX uco-types: <https://ontology.unifiedcyberontology.org/uco/types/>
+
+SELECT DISTINCT ?lEndTime ?lHashMethod ?lHashValue
+WHERE {
+  ?nAction
+    a case-investigation:InvestigativeAction ;
+    uco-action:endTime ?lEndTime ;
+    uco-action:result ?nProvenanceRecord ;
+    uco-action:result ?nDiskImage ;
+    .
+
+  ?nProvenanceRecord
+    a case-investigation:ProvenanceRecord ;
+    case-investigation:exhibitNumber "MD1" ;
+    uco-core:object ?nDiskImage ;
+    .
+
+  ?nDiskImage
+    a/rdfs:subClassOf* uco-observable:ObservableObject ;
+    uco-core:hasFacet ?nContentDataFacet ;
+    .
+
+  ?nContentDataFacet
+    a uco-observable:ContentDataFacet ;
+    uco-observable:hash ?nHash ;
+    .
+
+  ?nHash
+    a uco-types:Hash ;
+    uco-types:hashMethod ?lHashMethod ;
+    uco-types:hashValue ?lHashValue ;
+    .
+}
+ORDER BY ?lHashMethod
